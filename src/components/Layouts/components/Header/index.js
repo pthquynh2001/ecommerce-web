@@ -31,12 +31,13 @@ function Header() {
           </li>
         </ul>
         <div className={cx('btns-list')}>
-          <input className={cx('search-input')} placeholder='Searching...' />
-          <div className={cx('search-btn', 'btn')}>
-            <Link to='/' className={cx('user')}>
+          <div className={cx('search-box')}>
+            <input className={cx('search-input')} placeholder='Searching...' />
+            <Link to='/' className={cx('search-btn')}>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </Link>
           </div>
+
           <div className={cx('btn')}>
             <Link to='/' className={cx('user')}>
               <FontAwesomeIcon icon={faUser} />

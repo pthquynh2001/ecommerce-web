@@ -1,5 +1,5 @@
 :root {
-  --header-height: 72px;
+  --header-height: 88px;
 }
 
 li {
@@ -20,15 +20,14 @@ a {
 .inner {
   display: flex;
   align-items: center;
-  //   justify-content: space-between;
-  background-color: cyan;
+  // background-color: cyan;
   width: 1270px;
 }
 .logo {
   flex-grow: 0;
-}
-.logo-img {
-  max-height: calc(var(--header-height) - 8px);
+  &-img {
+    max-height: calc(var(--header-height) - 8px);
+  }
 }
 
 .navbar {
@@ -39,49 +38,60 @@ a {
   flex-grow: 0;
 }
 
-.nav-item + .nav-item {
-  margin-left: 24px;
-}
 .nav-item {
   font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
+  & a {
+    display: block;
+    line-height: var(--header-height);
+  }
+  & + .nav-item {
+    margin-left: 24px;
+  }
 }
-.nav-item a {
-  display: block;
-  line-height: var(--header-height);
-}
-
 .btns-list {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
-}
-.btn + .btn {
-  margin-left: 32px;
+  align-items: center;
 }
 .btn {
   font-size: 22px;
+  margin-left: 32px;
+
+  & a {
+    color: #000;
+  }
 }
-.btn a {
-  color: #000;
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  border-radius: 25px;
+  background: #000;
+  cursor: pointer;
+  &:hover .search-input {
+    width: 350px;
+    padding-right: 12px;
+  }
 }
+
 .search-input {
   font-size: 15px;
-  margin: 0 24px;
-  height: 42px;
-  width: 300px;
-  padding: 0 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  width: 0px;
+  outline: none;
+  border: none;
+  background: #000;
+  color: #fff;
+  transition: 0.4s;
+}
 
-  outline: none;
-}
-.search-input:focus {
-  outline: none;
-  border: 2px solid rgb(0 0 0 /12%);
-}
 .search-btn {
+  font-size: 16px;
+  padding: 12px 2px;
+  color: #fff;
 }
 .user {
 }
