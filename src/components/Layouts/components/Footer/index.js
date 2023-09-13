@@ -61,13 +61,17 @@ function Footer() {
         </div>
       </div>
 
-      <div className={cx('payment')}>
-        <img src={payment} alt='Payment' className={cx('payment-img')} />
+      <div className={cx('full-inner')}>
+        <div className={cx('payment')}>
+          <img src={payment} alt='Payment' className={cx('payment-img')} />
+        </div>
       </div>
-      <div className={cx('copy-right')}>
-        <p className={cx('copy-right-text')}>
-          Copyright © 1995–2023 Lush Retail Ltd.
-        </p>
+      <div className={cx('full-inner')}>
+        <div className={cx('copy-right')}>
+          <div className={cx('copy-right-text')}>
+            Copyright © 1995–2023 Lush Retail Ltd.
+          </div>
+        </div>
       </div>
     </footer>
   );

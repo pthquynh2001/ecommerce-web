@@ -3,19 +3,27 @@
   background: #000;
   color: #fff;
   bottom: 0;
-  padding: 56px 0;
-
-  position: relative;
+  padding-top: 56px;
 
   & a {
     color: #fff;
     font-weight: 700;
   }
 }
-.inner {
+.full-inner,
+.inner,
+.payment,
+.copy-right {
   display: flex;
+  position: relative;
   margin: auto;
   justify-content: center;
+  align-items: center;
+}
+
+.inner,
+.payment,
+.copy-right {
   width: 1270px;
 }
 footer p {
@@ -83,21 +91,22 @@ footer p {
 .title {
   margin-bottom: 32px;
 }
+
+.full-inner {
+  padding: 32px;
+  &:last-child {
+    border-top: 1px rgb(255 255 255 / 20%) solid;
+  }
+}
+
 .payment-img {
   width: 30%;
+  position: absolute;
+  left: 0;
 }
-
-.payment,
-.copy-right {
-  position: relative;
-  width: 1270px;
-  margin: auto;
-  padding: 12px 0;
-  border-top: 1px #fff solid;
-}
-
 .copy-right-text {
   position: absolute;
   right: 0;
-  bottom: 0;
+  align-self: center;
+  font-size: 14px;
 }
