@@ -54,9 +54,6 @@ function Header() {
             </Link>
           </div>
         </div>
-        {/* menu*/}
-        {/* search */}
-        {/* cart ...*/}
       </div>
     </header>
   );

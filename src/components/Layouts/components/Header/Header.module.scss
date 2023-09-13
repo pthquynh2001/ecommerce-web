@@ -2,13 +2,6 @@
   --header-height: 88px;
 }
 
-li {
-  list-style: none;
-}
-a {
-  color: #000;
-  text-decoration: none;
-}
 .wrapper {
   height: var(--header-height);
   width: 100%;
@@ -22,6 +15,13 @@ a {
   align-items: center;
   // background-color: cyan;
   width: 1270px;
+  & li {
+    list-style: none;
+  }
+  & a {
+    color: #000;
+    text-decoration: none;
+  }
 }
 .logo {
   flex-grow: 0;
@@ -91,7 +91,7 @@ a {
 .search-btn {
   font-size: 16px;
   padding: 12px 2px;
-  color: #fff;
+  color: #fff !important;
 }
 .user {
 }
