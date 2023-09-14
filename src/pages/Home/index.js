@@ -1,7 +1,8 @@
 import style from './Home.module.scss';
+import Slider from '../../components/Slider';
 
 const Home = () => {
-  return <div>Home Page</div>;
+  return <Slider />;
 };
 
 export default Home;

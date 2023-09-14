@@ -5,9 +5,17 @@
   bottom: 0;
   padding-top: 56px;
 
-  & a {
+  a {
     color: #fff;
     font-weight: 700;
+  }
+  p {
+    font-size: 14px;
+    &:not(:only-of-type) {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
 }
 .full-inner,
@@ -20,27 +28,17 @@
   justify-content: center;
   align-items: center;
 }
-
 .inner,
 .payment,
 .copy-right {
-  width: 1270px;
+  width: 1200px;
 }
-footer p {
-  font-size: 14px;
-  &:not(:only-of-type) {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-}
-
 .info {
   display: flex;
   margin-bottom: 56px;
 }
 .subcribe {
-  & p {
+  p {
     max-width: 50%;
     text-align: justify;
   }
@@ -52,33 +50,36 @@ footer p {
   height: 48px;
   box-sizing: content-box;
   margin: 24px 0;
-}
-.email-input {
-  width: 100%;
-  background: rgb(51 51 51);
-  color: #fff;
-  padding: 12px 48px 12px 12px;
-  border: none;
-  border-radius: 2px 0px 0px 2px;
-  &:hover {
-    border: 1px #fff solid;
-  }
-  &:focus {
+
+  .email-input {
+    width: 100%;
+    background: rgb(51 51 51);
+    outline: 1px rgb(51 51 51) solid;
+    border-radius: 2px;
     border: none;
-    outline: none;
+    color: #fff;
+    padding: 12px 48px 12px 12px;
+    &:hover {
+      outline: 1px #fff solid;
+    }
+    &:focus {
+      outline: 1px #fff solid;
+    }
+  }
+
+  .email-send-btn {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    padding: 16px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
   }
 }
-.email-send-btn {
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  padding: 16px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
+
 .service {
   padding-right: 32px;
   width: 20%;
