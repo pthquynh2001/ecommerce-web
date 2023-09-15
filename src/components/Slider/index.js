@@ -4,58 +4,59 @@ import { useState, useEffect } from 'react';
 
 const cx = classNames.bind(styles);
 
-const data = [
-  'https://res.cloudinary.com/lush/image/upload/v1694424116/collections/Hero%20Images/Sleepy_Bubble_Bar.jpg',
-  'https://res.cloudinary.com/lush/image/upload/v1694424237/collections/Hero%20Images/Supermilk_NA_2.jpg',
-  'https://res.cloudinary.com/lush/image/upload/v1673538800/collections/Hero%20Images/soap_hero.jpg',
-  'https://res.cloudinary.com/lush/image/upload/v1687880209/collections/Hero%20Images/Dirty_Springwash.jpg',
-];
-const Slider = () => {
+function Slider() {
+  const [sliderImages, setSliderImages] = useState([]);
+  useEffect(() => {
+    fetch('https://65040a43c8869921ae246c4c.mockapi.io/api/slider')
+      .then((response) => response.json())
+      .then((data) => setSliderImages(data));
+  }, []);
+
   const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
-      currentSlide < data.length - 1
+      currentSlide < sliderImages.length
         ? setCurrentSlide(currentSlide + 1)
         : setCurrentSlide(0);
     }, 4000);
     return () => clearInterval(interval);
   }, [currentSlide]);
   return (
-    <div className={cx('slider')}>
+    <div className={cx('wrapper')}>
       <div
-        className={cx('container')}
+        className={cx('inner')}
         style={{ transform: `translateX(calc(${currentSlide} * -100vw))` }}
       >
-        {data.map((link) => {
-          return <img src={link} alt='slide' />;
+        {sliderImages.map((img) => {
+          return <img src={img.url} alt='slide' />;
         })}
       </div>
 
       <div className={cx('radio-btns')}>
-        {data.map((link, index) => {
+        {sliderImages.map((img) => {
           return (
             <input
               type='radio'
-              id={`radio${index}`}
-              checked={currentSlide === index}
-              onChange={() => setCurrentSlide(index)}
+              id={`radio${img.id}`}
+              checked={currentSlide === img.id}
+              onChange={() => setCurrentSlide(img.id)}
             />
           );
         })}
       </div>
       {/* manual nav */}
       <div className={cx('manual')}>
-        {data.map((link, index) => {
+        {sliderImages.map((img) => {
           return (
             <label
               className={cx('manual-btn')}
-              htmlFor={`radio${index}`}
+              htmlFor={`radio${img.id}`}
             ></label>
           );
         })}
       </div>
     </div>
   );
-};
+}
 
 export default Slider;
