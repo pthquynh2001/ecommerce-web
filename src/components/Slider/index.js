@@ -15,7 +15,7 @@ function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
-      currentSlide < sliderImages.length
+      currentSlide < sliderImages.length - 1
         ? setCurrentSlide(currentSlide + 1)
         : setCurrentSlide(0);
     }, 4000);
@@ -28,29 +28,29 @@ function Slider() {
         style={{ transform: `translateX(calc(${currentSlide} * -100vw))` }}
       >
         {sliderImages.map((img) => {
-          return <img src={img.url} alt='slide' />;
+          return <img src={img.url} alt='slide-image' />;
         })}
       </div>
 
       <div className={cx('radio-btns')}>
-        {sliderImages.map((img) => {
+        {sliderImages.map((img, index) => {
           return (
             <input
               type='radio'
-              id={`radio${img.id}`}
-              checked={currentSlide === img.id}
-              onChange={() => setCurrentSlide(img.id)}
+              id={`radio${index}`}
+              checked={currentSlide === index}
+              onChange={() => setCurrentSlide(index)}
             />
           );
         })}
       </div>
       {/* manual nav */}
       <div className={cx('manual')}>
-        {sliderImages.map((img) => {
+        {sliderImages.map((img, index) => {
           return (
             <label
               className={cx('manual-btn')}
-              htmlFor={`radio${img.id}`}
+              htmlFor={`radio${index}`}
             ></label>
           );
         })}
