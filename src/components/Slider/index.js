@@ -5,38 +5,43 @@ import { useState, useEffect } from 'react';
 const cx = classNames.bind(styles);
 
 function Slider() {
-  const [sliderImages, setSliderImages] = useState([]);
+  const [slideImages, setSlideImages] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   useEffect(() => {
     fetch('https://65040a43c8869921ae246c4c.mockapi.io/api/slider')
       .then((response) => response.json())
-      .then((data) => setSliderImages(data));
+      .then((data) => setSlideImages(data))
+      .catch((err) => console.log(err));
   }, []);
 
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const slideCount = slideImages.length;
   useEffect(() => {
     const interval = setInterval(() => {
-      currentSlide < sliderImages.length - 1
-        ? setCurrentSlide(currentSlide + 1)
-        : setCurrentSlide(0);
-    }, 4000);
+      setCurrentSlide((prev) => (prev < slideCount - 1 ? prev + 1 : 0));
+    }, 3000);
+
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, [currentSlide, slideImages]);
   return (
     <div className={cx('wrapper')}>
       <div
         className={cx('inner')}
-        style={{ transform: `translateX(calc(${currentSlide} * -100vw))` }}
+        style={{
+          transform: `translateX(calc(${currentSlide}* -100vw))`,
+        }}
       >
-        {sliderImages.map((img) => {
+        {slideImages.map((img) => {
           return <img src={img.url} alt='slide-image' />;
         })}
       </div>
 
       <div className={cx('radio-btns')}>
-        {sliderImages.map((img, index) => {
+        {slideImages.map((img, index) => {
           return (
             <input
               type='radio'
+              key={img.id}
               id={`radio${index}`}
               checked={currentSlide === index}
               onChange={() => setCurrentSlide(index)}
@@ -46,9 +51,10 @@ function Slider() {
       </div>
       {/* manual nav */}
       <div className={cx('manual')}>
-        {sliderImages.map((img, index) => {
+        {slideImages.map((img, index) => {
           return (
             <label
+              key={img.id}
               className={cx('manual-btn')}
               htmlFor={`radio${index}`}
             ></label>
