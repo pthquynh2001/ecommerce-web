@@ -22,7 +22,7 @@ function Slider() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [currentSlide, slideImages]);
+  }, [currentSlide, slideImages, slideCount]);
   return (
     <div className={cx('wrapper')}>
       <div
@@ -31,8 +31,8 @@ function Slider() {
           transform: `translateX(calc(${currentSlide}* -100vw))`,
         }}
       >
-        {slideImages.map((img) => {
-          return <img src={img.url} alt='slide-image' />;
+        {slideImages.map((img, index) => {
+          return <img src={img.url} alt='slide-img' key={index} />;
         })}
       </div>
 

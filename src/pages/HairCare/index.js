@@ -1,4 +1,4 @@
-import style from './HairCare.module.scss';
+// import style from './HairCare.module.scss';
 
 const HairCare = () => {
   return <div>HairCare Page</div>;

@@ -21,12 +21,12 @@ const Card = ({ item }) => {
             <img
               className={cx('main-img')}
               src={item.mainImg}
-              alt='product-image'
+              alt='product-img'
             />
             <img
               className={cx('second-img')}
               src={item.secondImg}
-              alt='product-image'
+              alt='product-img'
             />
           </Link>
         </div>

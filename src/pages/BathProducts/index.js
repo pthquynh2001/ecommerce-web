@@ -1,4 +1,4 @@
-import style from './BathProducts.module.scss';
+// import style from './BathProducts.module.scss';
 
 const BathProducts = () => {
   return <div>BathProducts Page</div>;

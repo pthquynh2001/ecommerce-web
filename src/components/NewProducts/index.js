@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 function NewProducts() {
   const [productImages, setProductImages] = useState([]);
   const carouselRef = useRef();
-  let isDragStart = false;
+  // let isDragStart = false;
 
   useEffect(() => {
     fetch('https://65040a43c8869921ae246c4c.mockapi.io/api/new-products')
@@ -22,35 +22,35 @@ function NewProducts() {
       .catch((err) => console.log(err));
   }, []);
 
-  const dragStart = () => {
-    console.log('start');
-    isDragStart = true;
-  };
+  // const dragStart = () => {
+  //   console.log('start');
+  //   isDragStart = true;
+  // };
 
-  const dragging = (e) => {
-    if (isDragStart) {
-      console.log('dragging');
-      if (!isDragStart) return;
-      e.preventDefault();
-      // carouselRef.current.scrollLeft = e.pageX;
-      const offsetX =
-        e.pageX - carouselRef.current.getBoundingClientRect().left;
-      carouselRef.current.scrollLeft = offsetX;
-    }
-  };
+  // const dragging = (e) => {
+  //   if (isDragStart) {
+  //     console.log('dragging');
+  //     if (!isDragStart) return;
+  //     e.preventDefault();
+  //     // carouselRef.current.scrollLeft = e.pageX;
+  //     const offsetX =
+  //       e.pageX - carouselRef.current.getBoundingClientRect().left;
+  //     carouselRef.current.scrollLeft = offsetX;
+  //   }
+  // };
 
-  const dragStop = () => {
-    console.log('end');
-    isDragStart = false;
-  };
+  // const dragStop = () => {
+  //   console.log('end');
+  //   isDragStart = false;
+  // };
 
-  useEffect(() => {
-    if (carouselRef.current) {
-      carouselRef.current.addEventListener('mousedown', dragStart);
-      carouselRef.current.addEventListener('mousemove', dragging);
-      carouselRef.current.addEventListener('mouseup', dragStop);
-    }
-  }, [carouselRef.current]);
+  // useEffect(() => {
+  //   if (carouselRef.current) {
+  //     carouselRef.current.addEventListener('mousedown', dragStart);
+  //     carouselRef.current.addEventListener('mousemove', dragging);
+  //     carouselRef.current.addEventListener('mouseup', dragStop);
+  //   }
+  // }, [carouselRef.current]);
 
   return (
     <div className={cx('wrapper')}>

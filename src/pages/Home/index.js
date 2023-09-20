@@ -1,4 +1,4 @@
-import style from './Home.module.scss';
+// import style from './Home.module.scss';
 import Slider from '../../components/Slider';
 import NewProducts from '../../components/NewProducts';
 
