@@ -3,19 +3,22 @@
   color: #000;
 }
 .wrapper {
-  width: calc(1200px * 25 / 100);
-  min-height: 400px;
+  min-width: 236px;
+  min-height: 236px;
   margin: 32px;
-  border: 1px solid transparent;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  background-color: rgb(244, 242, 244);
+  transition: background 0.3s;
   &:hover {
-    border: 1px solid rgb(0 0 0 /30%);
+    background-color: rgb(237, 235, 237);
   }
 }
 .header {
   display: flex;
   position: relative;
   width: 100%;
-  min-height: 260px;
+  // height: 300px;
   flex-direction: column;
   .badge {
     position: absolute;
@@ -29,9 +32,8 @@
     margin: 16px 8px 0;
   }
   .img {
-    min-width: 180px;
-    width: calc(100% - 48px);
-    min-height: 180px;
+    width: 188px;
+    height: 188px;
     display: flex;
     position: relative;
     margin: 24px;
@@ -58,6 +60,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 24px;
   .text {
     padding: 4px;
     max-height: 36px;
