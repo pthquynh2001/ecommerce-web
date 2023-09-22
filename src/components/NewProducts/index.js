@@ -12,24 +12,51 @@ const cx = classNames.bind(styles);
 
 function NewProducts() {
   const [productImages, setProductImages] = useState([]);
+  const [scrollLeft, setScrollLeft] = useState(0);
   const carouselRef = useRef();
+  const chevronLeftRef = useRef();
+  const chevronRightRef = useRef();
 
+  // fetch API
   useEffect(() => {
     fetch('https://65040a43c8869921ae246c4c.mockapi.io/api/new-products')
       .then((response) => response.json())
       .then((data) => setProductImages(data))
       .catch((err) => console.log(err));
   }, []);
+  // END fetch API
 
+  useEffect(() => {
+    if (carouselRef.current) {
+      const carouselWidth = carouselRef.current.scrollWidth;
+      const containerWidth = carouselRef.current.clientWidth;
+
+      if (scrollLeft === 0) {
+        chevronLeftRef.current.style.display = 'none';
+      } else {
+        chevronLeftRef.current.style.display = 'block';
+      }
+
+      if (scrollLeft + containerWidth >= carouselWidth) {
+        chevronRightRef.current.style.display = 'none';
+      } else {
+        chevronRightRef.current.style.display = 'block';
+      }
+    }
+  });
   const handleChevronClick = (direction) => {
-    const carousel = carouselRef.current;
-    const scrollAmount = 1200 / 4;
+    const scrollAmount = 300; // Điều chỉnh giá trị scroll
 
     if (direction === 'left') {
-      carousel.scrollLeft -= scrollAmount;
+      carouselRef.current.scrollLeft -= scrollAmount;
+      console.log('left');
+      console.log(carouselRef.current.scrollLeft);
     } else {
-      carousel.scrollLeft += scrollAmount;
+      carouselRef.current.scrollLeft += scrollAmount;
+      console.log('right');
+      console.log(carouselRef.current.scrollLeft);
     }
+    setScrollLeft(carouselRef.current.scrollLeft);
   };
 
   return (
@@ -40,6 +67,7 @@ function NewProducts() {
           <div
             className={cx('chevron-btn', 'left')}
             onClick={() => handleChevronClick('left')}
+            ref={chevronLeftRef}
           >
             <FontAwesomeIcon icon={faChevronLeft} />
           </div>
@@ -51,6 +79,7 @@ function NewProducts() {
           <div
             className={cx('chevron-btn', 'right')}
             onClick={() => handleChevronClick('right')}
+            ref={chevronRightRef}
           >
             <FontAwesomeIcon icon={faChevronRight} />
           </div>
