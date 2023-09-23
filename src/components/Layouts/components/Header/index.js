@@ -21,13 +21,13 @@ function Header() {
         </Link>
         <ul className={cx('navbar')}>
           <li className={cx('nav-item')}>
-            <Link to='/bath-products'>Bath Products</Link>
+            <Link to='/category/bath-products'>Bath Products</Link>
           </li>
           <li className={cx('nav-item')}>
-            <Link to='/shower-products'>Shower Products</Link>
+            <Link to='/category/shower-products'>Shower Products</Link>
           </li>
           <li className={cx('nav-item')}>
-            <Link to='/hair-care'>Hair Care</Link>
+            <Link to='/category/hair-care'>Hair Care</Link>
           </li>
         </ul>
         <div className={cx('btns-list')}>

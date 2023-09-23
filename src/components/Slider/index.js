@@ -31,35 +31,31 @@ function Slider() {
           transform: `translateX(calc(${currentSlide}* -100vw))`,
         }}
       >
-        {slideImages.map((img, index) => {
-          return <img src={img.url} alt='slide-img' key={index} />;
-        })}
+        {slideImages.map((img, index) => (
+          <img src={img.url} alt='slide-img' key={index} />
+        ))}
       </div>
 
       <div className={cx('radio-btns')}>
-        {slideImages.map((img, index) => {
-          return (
-            <input
-              type='radio'
-              key={img.id}
-              id={`radio${index}`}
-              checked={currentSlide === index}
-              onChange={() => setCurrentSlide(index)}
-            />
-          );
-        })}
+        {slideImages.map((img, index) => (
+          <input
+            type='radio'
+            key={img.id}
+            id={`radio${index}`}
+            checked={currentSlide === index}
+            onChange={() => setCurrentSlide(index)}
+          />
+        ))}
       </div>
       {/* manual nav */}
       <div className={cx('manual')}>
-        {slideImages.map((img, index) => {
-          return (
-            <label
-              key={img.id}
-              className={cx('manual-btn')}
-              htmlFor={`radio${index}`}
-            ></label>
-          );
-        })}
+        {slideImages.map((img, index) => (
+          <label
+            key={img.id}
+            className={cx('manual-btn')}
+            htmlFor={`radio${index}`}
+          ></label>
+        ))}
       </div>
     </div>
   );

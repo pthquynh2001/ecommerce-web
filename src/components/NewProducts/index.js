@@ -62,7 +62,7 @@ function NewProducts() {
   return (
     <div className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <h1 className={cx('title')}>NEW PRODUCTS</h1>
+        <h2 className={cx('title')}>NEW PRODUCTS</h2>
         <div className={cx('container')}>
           <div
             className={cx('chevron-btn', 'left')}
