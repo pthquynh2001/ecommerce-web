@@ -31,7 +31,6 @@ const Card = ({ item }) => {
         </div>
       </div>
       <div className={cx('body')}>
-        <div className={cx('review', 'text')}>no review yet</div>
         <div className={cx('type', 'text')}>{item.type}</div>
         <Link to={`/product/${item.id}`} className={cx('link')}>
           <h2 className={cx('name')}>{item.name}</h2>

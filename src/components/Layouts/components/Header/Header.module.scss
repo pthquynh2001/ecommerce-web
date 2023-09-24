@@ -43,14 +43,30 @@
   .nav-item {
     font-size: 17px;
     font-weight: 700;
-    text-transform: uppercase;
-
-    a {
-      display: block;
-      line-height: var(--header-height);
+    .title {
+      text-transform: uppercase;
     }
-    + .nav-item {
+    & + .nav-item {
       margin-left: 24px;
+    }
+    & > a {
+      position: relative;
+      padding: 16px 4px;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background: #000;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    &:hover > a::after {
+      width: 100%;
     }
   }
 }

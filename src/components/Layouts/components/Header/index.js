@@ -1,6 +1,8 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import logo from '../../../../assets/images/logo.png';
+import ProductsMenu from './ProductsMenu';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,6 +15,8 @@ import {
 const cx = classNames.bind(styles);
 
 function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
@@ -20,14 +24,35 @@ function Header() {
           <img src={logo} alt='LOGO' className={cx('logo-img')} />
         </Link>
         <ul className={cx('navbar')}>
-          <li className={cx('nav-item')}>
-            <Link to='/category/bath-products'>Bath Products</Link>
+          <li
+            className={cx('nav-item')}
+            onMouseOver={() => {
+              setOpen(true);
+            }}
+            onMouseLeave={() => {
+              setOpen(false);
+            }}
+          >
+            <Link to='/' className={cx('title')}>
+              Products
+            </Link>
+            <ProductsMenu state={open ? 'active' : 'inactive'} />
           </li>
           <li className={cx('nav-item')}>
-            <Link to='/category/shower-products'>Shower Products</Link>
+            <Link to='/' className={cx('title')}>
+              Articles
+            </Link>
+          </li>
+
+          <li className={cx('nav-item')}>
+            <Link to='/' className={cx('title')}>
+              Contact
+            </Link>
           </li>
           <li className={cx('nav-item')}>
-            <Link to='/category/hair-care'>Hair Care</Link>
+            <Link to='/' className={cx('title')}>
+              About Us
+            </Link>
           </li>
         </ul>
         <div className={cx('btns-list')}>

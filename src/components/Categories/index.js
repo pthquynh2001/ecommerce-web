@@ -26,6 +26,7 @@ const Categories = () => {
             <Link
               to={`/category/${img.type.toLowerCase().replace(' ', '-')}`}
               className={cx('type')}
+              key={img.id}
             >
               <div className={cx('category-btn')}>
                 <div className={cx('name')} key={img.id}>
