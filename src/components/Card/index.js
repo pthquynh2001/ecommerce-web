@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -40,6 +41,9 @@ const Card = ({ item }) => {
           <span className={cx('price')}>{item.price} VND</span> /{' '}
           <span className={cx('size')}>{item.size} ml</span>
         </div>
+      </div>
+      <div className={cx('cart')}>
+        Add to cart <FontAwesomeIcon icon={faCartShopping} />
       </div>
     </div>
   );

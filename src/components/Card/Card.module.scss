@@ -3,9 +3,10 @@
   color: #000;
 }
 .wrapper {
+  position: relative;
   min-width: 236px;
   min-height: 236px;
-  margin: 0 32px;
+  margin: 0 32px 32px;
   border: none;
   border-radius: 0 0 10px 10px;
   background-color: rgb(244, 242, 244);
@@ -56,11 +57,10 @@
 }
 
 .body {
-  margin: 0 16px;
+  margin: 0 16px 38px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 24px;
   .text {
     padding: 4px;
     max-height: 36px;
@@ -83,5 +83,28 @@
     font-weight: 800;
   }
   .size {
+  }
+}
+
+.cart {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  min-width: 30px;
+  min-height: 40px;
+  background: #fff;
+  color: #000;
+  border: #ccc 1px solid;
+  border-radius: 22px;
+  z-index: 999;
+  line-height: 44px;
+  padding: 0 12px;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
   }
 }

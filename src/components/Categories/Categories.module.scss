@@ -36,6 +36,7 @@
         background-color: rgb(237 235 237);
       }
       img {
+        transition: filter 0.3s;
         filter: contrast(60%);
       }
     }
