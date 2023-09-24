@@ -10,7 +10,7 @@ import {
 
 const cx = classNames.bind(styles);
 
-function Carousel({ API, title }) {
+function Carousel({ productAPI, title }) {
   const [productImages, setProductImages] = useState([]);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [rendered, setRendered] = useState(false);
@@ -20,12 +20,13 @@ function Carousel({ API, title }) {
 
   // fetch API
   useEffect(() => {
-    fetch(API)
-      .then((response) => response.json())
-      .then((data) => setProductImages(data))
-      .then(() => setRendered(true))
-      .catch((err) => console.log(err));
-  }, [API]);
+    const fetchData = async () => {
+      const data = await productAPI();
+      setProductImages(data);
+      setRendered(true);
+    };
+    fetchData();
+  }, [productAPI]);
   // END fetch API
 
   useEffect(() => {
@@ -44,7 +45,6 @@ function Carousel({ API, title }) {
       } else {
         chevronRightRef.current.style.display = 'block';
       }
-      console.log(carouselWidth, containerWidth);
     }
   }, [scrollLeft, rendered]);
 

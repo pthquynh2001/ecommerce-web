@@ -10,7 +10,7 @@ const ProductsMenu = ({ state }) => {
       <div className={cx('inner')}>
         <ul className={cx('category', 'featured')}>
           <li className={cx('title')}>
-            <Link to={'/'}>Featured</Link>
+            <Link to={'/collections/featured'}>Featured</Link>
           </li>
           <li className={cx('sub-category')}>
             <Link to={'/'}>New products</Link>

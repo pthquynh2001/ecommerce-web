@@ -1,6 +1,8 @@
 import classNames from 'classnames/bind';
 import styles from './Slider.module.scss';
 import { useState, useEffect } from 'react';
+import { getSliderImgs } from '../api/imageAPIs';
+// import { useFetch } from '../api';
 
 const cx = classNames.bind(styles);
 
@@ -9,10 +11,11 @@ function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    fetch('https://65040a43c8869921ae246c4c.mockapi.io/api/slider')
-      .then((response) => response.json())
-      .then((data) => setSlideImages(data))
-      .catch((err) => console.log(err));
+    const fetchData = async () => {
+      const data = await getSliderImgs();
+      setSlideImages(data);
+    };
+    fetchData();
   }, []);
 
   const slideCount = slideImages.length;

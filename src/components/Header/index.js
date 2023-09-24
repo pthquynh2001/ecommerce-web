@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
-import logo from '../../../../assets/images/logo.png';
+import logo from '../../assets/images/logo.png';
 import ProductsMenu from './ProductsMenu';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -33,7 +33,7 @@ function Header() {
               setOpen(false);
             }}
           >
-            <Link to='/' className={cx('title')}>
+            <Link to='/collections' className={cx('title')}>
               Products
             </Link>
             <ProductsMenu state={open ? 'active' : 'inactive'} />

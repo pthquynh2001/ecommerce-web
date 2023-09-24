@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './Categories.module.scss';
+import { getCategoryImgs } from '../api/imageAPIs';
 
 const cx = classNames.bind(styles);
 
@@ -10,10 +11,11 @@ const Categories = () => {
 
   // fetch API
   useEffect(() => {
-    fetch('https://650e1033a8b42265ec2ceca1.mockapi.io/api/category')
-      .then((response) => response.json())
-      .then((data) => setCategoryImages(data))
-      .catch((err) => console.log(err));
+    const fetchData = async () => {
+      const data = await getCategoryImgs();
+      setCategoryImages(data);
+    };
+    fetchData();
   }, []);
   // END fetch API
 
@@ -24,7 +26,7 @@ const Categories = () => {
         <div className={cx('container')}>
           {categoryImages.map((img) => (
             <Link
-              to={`/category/${img.type.toLowerCase().replace(' ', '-')}`}
+              to={`/collections/${img.type.toLowerCase().replace(' ', '-')}`}
               className={cx('type')}
               key={img.id}
             >

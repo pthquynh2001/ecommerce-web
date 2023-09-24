@@ -5,16 +5,19 @@ import BathProducts from '../pages/BathProducts';
 import ShowerProducts from '../pages/ShowerProducts';
 import HairCare from '../pages/HairCare';
 import Special from '../pages/Special';
+import FeaturedProducts from '../pages/FeaturedProducts';
 
 //ai cung xem duoc, khong can dang nhap
 const publicRoutes = [
   { path: '/', component: Home },
+  { path: '/collections/featured', component: FeaturedProducts },
+
   {
-    path: '/category/bath-products',
+    path: '/collections/bath',
     component: BathProducts,
   },
-  { path: '/category/shower-products', component: ShowerProducts },
-  { path: '/category/hair-care', component: HairCare },
+  { path: '/collections/shower', component: ShowerProducts },
+  { path: '/collections/hair', component: HairCare },
   { path: '/special', component: Special, layout: HeaderOnly },
 ];
 //dang nhap moi xem duoc => login

@@ -1,6 +1,6 @@
 import styles from './Footer.module.scss';
 import classNames from 'classnames/bind';
-import payment from '../../../../assets/images/payment.png';
+import payment from '../../assets/images/payment.png';
 
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
