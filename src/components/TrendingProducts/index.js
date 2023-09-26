@@ -4,7 +4,9 @@ import { getTrendingProducts } from '../api/productAPIs';
 
 const TrendingProducts = () => {
   return (
-    <Carousel productAPI={getTrendingProducts} title='Trending Products' />
+    <div className='trending-products'>
+      <Carousel productAPI={getTrendingProducts} title='Trending Products' />
+    </div>
   );
 };
 
