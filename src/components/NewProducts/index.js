@@ -3,7 +3,11 @@ import Carousel from '../Carousel';
 import { getNewProducts } from '../api/productAPIs';
 
 const NewProducts = () => {
-  return <Carousel productAPI={getNewProducts} title='New Products' />;
+  return (
+    <>
+      <Carousel productAPI={getNewProducts} title='New Products' />;
+    </>
+  );
 };
 
 export default NewProducts;

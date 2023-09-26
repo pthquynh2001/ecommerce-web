@@ -13,64 +13,64 @@ const ProductsMenu = ({ state }) => {
             <Link to={'/collections/featured'}>Featured</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>New products</Link>
+            <Link to={'/collections/featured'}>New products</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Trending products</Link>
+            <Link to={'/collections/featured'}>Trending products</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Barbie collection</Link>
+            <Link to={'/collections/featured'}>Barbie collection</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Halloween collection</Link>
+            <Link to={'/collections/featured'}>Halloween collection</Link>
           </li>
         </ul>
         <ul className={cx('category', 'featured')}>
           <li className={cx('title')}>
-            <Link to={'/'}>Bath</Link>
+            <Link to={'/collections/bath'}>Bath</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Bath Bombs</Link>
+            <Link to={'/collections/bath'}>Bath Bombs</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Bubble Bars</Link>
+            <Link to={'/collections/bath'}>Bubble Bars</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Bath Oils</Link>
+            <Link to={'/collections/bath'}>Bath Oils</Link>
           </li>
         </ul>
         <ul className={cx('category', 'featured')}>
           <li className={cx('title')}>
-            <Link to={'/'}>Shower</Link>
+            <Link to={'/collections/shower'}>Shower</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Shower Gels and Jellies</Link>
+            <Link to={'/collections/shower'}>Shower Gels and Jellies</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Shower Moisturisers</Link>
+            <Link to={'/collections/shower'}>Shower Moisturisers</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Solid Soaps</Link>
+            <Link to={'/collections/shower'}>Solid Soaps</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Body Scrubs</Link>
+            <Link to={'/collections/shower'}>Body Scrubs</Link>
           </li>
         </ul>
         <ul className={cx('category', 'featured')}>
           <li className={cx('title')}>
-            <Link to={'/'}>Hair</Link>
+            <Link to={'/collections/hair'}>Hair</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Shampoos</Link>
+            <Link to={'/collections/hair'}>Shampoos</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Conditioners</Link>
+            <Link to={'/collections/hair'}>Conditioners</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Treatments</Link>
+            <Link to={'/collections/hair'}>Treatments</Link>
           </li>
           <li className={cx('sub-category')}>
-            <Link to={'/'}>Styling</Link>
+            <Link to={'/collections/hair'}>Styling</Link>
           </li>
         </ul>
       </div>

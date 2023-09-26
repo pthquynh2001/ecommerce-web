@@ -1,4 +1,4 @@
-import './GlobalStyles.scss';
+import './main.scss';
 import './grid.scss';
 function GlobalStyles({ children }) {
   return children;

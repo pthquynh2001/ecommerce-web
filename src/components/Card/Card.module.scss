@@ -4,45 +4,37 @@
 }
 .wrapper {
   position: relative;
-  min-width: 236px;
-  min-height: 236px;
-  margin: 0 32px 32px;
-  border: none;
-  border-radius: 0 0 10px 10px;
-  background-color: rgb(244, 242, 244);
-  transition: background 0.3s;
-  &:hover {
-    background-color: rgb(237, 235, 237);
-  }
+  width: 100%;
+  min-width: 210px;
+  background: #fff;
+  margin-bottom: 36px;
 }
 .header {
   display: flex;
   position: relative;
   width: 100%;
-  // height: 300px;
+  height: 100%;
   flex-direction: column;
-  .badge {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 4px;
-  }
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   .wishlist {
-    font-size: 24px;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    z-index: 3;
+    font-size: 30px;
     color: #000;
-    margin: 16px 8px 0;
   }
   .img {
-    width: 220px;
-    height: 220px;
-    display: flex;
-    position: relative;
-    margin: 8px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 100%;
     //   position: relative;
     .main-img,
     .second-img {
       width: 100%;
-      height: 100%;
+      height: auto;
       position: absolute;
       left: 0;
       top: 0;
@@ -50,17 +42,36 @@
     .main-img {
       z-index: 1;
     }
-    &:hover .second-img {
-      z-index: 1;
-    }
+  }
+  &:hover .second-img {
+    z-index: 1;
+  }
+  .cart {
+    font-size: 15px;
+    padding: 10px 20px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 92%;
+    transform: translate(-50%, 0);
+    background: #000;
+    color: #fff;
+    z-index: 2;
+    transition: all 0.3s;
+    text-align: center;
+    opacity: 0;
+  }
+  &:hover .cart {
+    transform: translate(-50%, -122%);
+    opacity: 1;
   }
 }
 
 .body {
-  margin: 0 16px 38px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 8px 16px;
   .text {
     padding: 4px;
     max-height: 36px;
@@ -71,40 +82,18 @@
   .type {
     text-transform: uppercase;
     color: rgb(0 0 0 /60%);
+    font-size: 14px;
   }
   .name {
-    box-sizing: content-box;
+    text-transform: uppercase;
   }
   .tagline {
   }
   .price-size {
   }
   .price {
-    font-weight: 800;
+    font-weight: 700;
   }
   .size {
-  }
-}
-
-.cart {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -20px;
-  min-width: 30px;
-  min-height: 40px;
-  background: #fff;
-  color: #000;
-  border: #ccc 1px solid;
-  border-radius: 22px;
-  z-index: 2;
-  line-height: 44px;
-  padding: 0 12px;
-  transition: all 0.3s;
-
-  &:hover {
-    background: #000;
-    color: #fff;
-    cursor: pointer;
   }
 }

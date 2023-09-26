@@ -21,6 +21,7 @@
   justify-content: center;
 }
 .chevron-btn {
+  display: flex;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -36,7 +37,7 @@
   }
 }
 .carousel {
-  width: 1200px;
+  width: 95%;
   white-space: nowrap;
   display: flex;
   overflow: hidden;

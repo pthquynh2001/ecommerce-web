@@ -11,13 +11,12 @@ const cx = classNames.bind(styles);
 const Card = ({ item }) => {
   return (
     <div className={cx('wrapper')}>
-      <div className={cx('header')}>
-        <Link to={'/'} className={cx('wishlist')}>
-          <FontAwesomeIcon icon={faHeart} />
-        </Link>
-        <div className={cx('badge')}>{item.badgeId}</div>
-        <div className={cx('img')}>
-          <Link to={`/product/${item.id}`} className={cx('link')}>
+      <Link to={`/product/${item.id}`} className={cx('link')}>
+        <div className={cx('header')}>
+          <Link to={'/'} className={cx('wishlist')}>
+            <FontAwesomeIcon icon={faHeart} />
+          </Link>
+          <div className={cx('img')}>
             <img
               className={cx('main-img')}
               src={item.mainImg}
@@ -28,23 +27,22 @@ const Card = ({ item }) => {
               src={item.secondImg}
               alt='product-img'
             />
-          </Link>
+          </div>
+          <div className={cx('cart')}>
+            <div className={cx('cart-text')}>
+              Add to cart <FontAwesomeIcon icon={faCartShopping} />
+            </div>
+          </div>
         </div>
-      </div>
-      <div className={cx('body')}>
-        <div className={cx('type', 'text')}>{item.type}</div>
-        <Link to={`/product/${item.id}`} className={cx('link')}>
+        <div className={cx('body')}>
           <h2 className={cx('name')}>{item.name}</h2>
-        </Link>
-        <div className={cx('tagline', 'text')}>{item.tagline}</div>
-        <div className={cx('price-size', 'text')}>
-          <span className={cx('price')}>{item.price} VND</span> /{' '}
-          <span className={cx('size')}>{item.size} ml</span>
+          <div className={cx('type', 'text')}>{item.type}</div>
+          <div className={cx('tagline', 'text')}>{item.tagline}</div>
+          <div className={cx('price-size', 'text')}>
+            <div className={cx('price')}>{item.price} VND</div>
+          </div>
         </div>
-      </div>
-      <div className={cx('cart')}>
-        Add to cart <FontAwesomeIcon icon={faCartShopping} />
-      </div>
+      </Link>
     </div>
   );
 };

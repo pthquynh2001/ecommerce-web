@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 function Carousel({ productAPI, title }) {
   const [productImages, setProductImages] = useState([]);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [rendered, setRendered] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const carouselRef = useRef();
   const chevronLeftRef = useRef();
   const chevronRightRef = useRef();
@@ -23,7 +23,7 @@ function Carousel({ productAPI, title }) {
     const fetchData = async () => {
       const data = await productAPI();
       setProductImages(data);
-      setRendered(true);
+      setLoaded(true);
     };
     fetchData();
   }, [productAPI]);
@@ -46,16 +46,18 @@ function Carousel({ productAPI, title }) {
         chevronRightRef.current.style.display = 'block';
       }
     }
-  }, [scrollLeft, rendered]);
+  }, [scrollLeft, loaded]);
 
   const handleChevronClick = (direction) => {
-    const scrollAmount = 300; // Điều chỉnh giá trị scroll
-
+    const scrollAmount = carouselRef.current.clientWidth / 4 + 1; // Điều chỉnh giá trị scroll
+    console.log(scrollAmount);
     if (direction === 'left') {
       setScrollLeft((carouselRef.current.scrollLeft -= scrollAmount));
     } else {
       setScrollLeft((carouselRef.current.scrollLeft += scrollAmount));
     }
+    console.log(carouselRef.current.scrollWidth);
+    console.log(carouselRef.current.scrollLeft);
   };
 
   return (
@@ -72,7 +74,9 @@ function Carousel({ productAPI, title }) {
           </div>
           <div className={cx('carousel')} ref={carouselRef}>
             {productImages.map((item) => (
-              <Card item={item} key={item.id} />
+              <div className={cx('col', 'l-3')} key={item.id}>
+                <Card item={item} />
+              </div>
             ))}
           </div>
           <div
