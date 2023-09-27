@@ -29,7 +29,6 @@ const Products = () => {
         const data = await response.json();
         // setLoading(false);
         setProducts(data);
-        console.log(data, pagination.page);
       } catch (err) {
         console.log(err);
       }
