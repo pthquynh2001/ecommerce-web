@@ -10,11 +10,13 @@ const cx = classNames.bind(styles);
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+  // const productsRef = useRef();
+
   const [pagination, setPagination] = useState({
     page: 1,
     limit: 12,
-    total: 31,
+    totalItems: 31,
   });
   const [filters, setFilters] = useState({
     page: 1,
@@ -24,10 +26,11 @@ const Products = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const paramsString = queryString.stringify(filters);
         const response = await fetch(`${NEW_PRODUCTS_URL}?${paramsString}`);
         const data = await response.json();
-        // setLoading(false);
+        setLoading(false);
         setProducts(data);
       } catch (err) {
         console.log(err);
@@ -40,6 +43,10 @@ const Products = () => {
     setPagination({ ...pagination, page: newPage });
     setFilters({ ...filters, page: newPage });
     console.log('filters', filters);
+    if (!loading) {
+      window.scrollTo(0, 500);
+      // productsRef.current.scrollTop = 10;
+    }
   }
 
   return (
@@ -63,12 +70,14 @@ const Products = () => {
                     </div>
                   ))}
               </div>
-              {pagination && (
-                <Pagination
-                  pagination={pagination}
-                  onPageChange={handlePageChange}
-                />
-              )}
+              <div className={cx('row', 'pagination')}>
+                {pagination && (
+                  <Pagination
+                    pagination={pagination}
+                    onPageChange={handlePageChange}
+                  />
+                )}
+              </div>
             </div>
           </div>
         </div>

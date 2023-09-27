@@ -1,2 +1,39 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 32px;
+}
 .btn {
+  height: 40px;
+  padding: 0 8px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  background: #000;
+  color: #fff;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+}
+.page-list {
+  display: flex;
+  margin: 0 24px;
+  .number {
+    list-style: none;
+    margin: 12px;
+    padding: 0 8px;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0.5;
+    &.active {
+      opacity: 1;
+    }
+  }
 }

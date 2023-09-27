@@ -26,7 +26,7 @@ const Categories = () => {
         <div className={cx('container')}>
           {categoryImages.map((img) => (
             <Link
-              to={`/collections/${img.type.toLowerCase().replace(' ', '-')}`}
+              to={`/collections/${img.cat}`}
               className={cx('type')}
               key={img.id}
             >

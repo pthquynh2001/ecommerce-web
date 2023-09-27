@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import styles from './Pagination.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 Pagination.propTypes = {
   pagination: PropTypes.object.isRequired,
@@ -12,25 +16,52 @@ Pagination.defaultProps = {
 
 function Pagination(props) {
   const { pagination, onPageChange } = props;
-  const { page, limit, total } = pagination;
-  const totalPages = Math.ceil(total / limit);
+  const { page, limit, totalItems } = pagination;
+  const totalPages = Math.ceil(totalItems / limit);
+  const [numbers, setNumbers] = useState([]);
+  const [active, setActive] = useState(1);
+
+  useEffect(() => {
+    const newNumbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+      newNumbers.push(i);
+    }
+    setNumbers(newNumbers);
+  }, [totalPages]);
 
   function handlePageChange(newPage) {
     if (onPageChange) {
       onPageChange(newPage);
       console.log('totalPages', totalPages);
+      setActive(newPage);
     }
   }
 
   return (
-    <div>
-      <button disabled={page <= 1} onClick={() => handlePageChange(page - 1)}>
+    <div className={cx('wrapper')}>
+      <button
+        disabled={page <= 1}
+        onClick={() => handlePageChange(page - 1)}
+        className={cx('btn')}
+      >
         Prev
       </button>
+      <ul className={cx('page-list')}>
+        {numbers.map((number) => (
+          <li
+            key={number}
+            className={cx('number', number === active ? 'active' : '')}
+            onClick={() => handlePageChange(number)}
+          >
+            {number}
+          </li>
+        ))}
+      </ul>
 
       <button
         disabled={page >= totalPages}
         onClick={() => handlePageChange(page + 1)}
+        className={cx('btn')}
       >
         Next
       </button>
