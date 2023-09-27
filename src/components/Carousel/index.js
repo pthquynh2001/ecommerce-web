@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 function Carousel({ productAPI, title }) {
   const [productImages, setProductImages] = useState([]);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [loaded, setLoaded] = useState(false);
+  const [loading, setLoading] = useState(true);
   const carouselRef = useRef();
   const chevronLeftRef = useRef();
   const chevronRightRef = useRef();
@@ -23,7 +23,7 @@ function Carousel({ productAPI, title }) {
     const fetchData = async () => {
       const data = await productAPI();
       setProductImages(data);
-      setLoaded(true);
+      setLoading(false);
     };
     fetchData();
   }, [productAPI]);
@@ -46,7 +46,7 @@ function Carousel({ productAPI, title }) {
         chevronRightRef.current.style.display = 'block';
       }
     }
-  }, [scrollLeft, loaded]);
+  }, [scrollLeft, loading]);
 
   const handleChevronClick = (direction) => {
     const scrollAmount = carouselRef.current.clientWidth / 4 + 1; // Điều chỉnh giá trị scroll

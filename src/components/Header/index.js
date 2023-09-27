@@ -33,7 +33,7 @@ function Header() {
               setOpen(false);
             }}
           >
-            <Link to='/collections' className={cx('title')}>
+            <Link to='/' className={cx('title')}>
               Products
             </Link>
             <ProductsMenu state={open ? 'active' : 'inactive'} />

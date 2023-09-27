@@ -1,32 +1,36 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 Pagination.propTypes = {
   pagination: PropTypes.object.isRequired,
   onPageChange: PropTypes.func,
 };
+
 Pagination.defaultProps = {
   onPageChange: null,
 };
 
 function Pagination(props) {
   const { pagination, onPageChange } = props;
-  const { _page, _limit, _totalRows } = pagination;
-  //trang hien tai, item/trang, tong so item
-  const totalPages = Math.ceil(_totalRows / _limit);
+  const { page, limit, total } = pagination;
+  const totalPages = Math.ceil(total / limit);
 
   function handlePageChange(newPage) {
     if (onPageChange) {
       onPageChange(newPage);
+      console.log('totalPages', totalPages);
     }
   }
+
   return (
     <div>
-      <button disable={_page <= 1} onClick={() => handlePageChange(_page - 1)}>
+      <button disabled={page <= 1} onClick={() => handlePageChange(page - 1)}>
         Prev
       </button>
+
       <button
-        disable={_page >= totalPages}
-        onClick={() => handlePageChange(_page + 1)}
+        disabled={page >= totalPages}
+        onClick={() => handlePageChange(page + 1)}
       >
         Next
       </button>

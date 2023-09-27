@@ -8,23 +8,19 @@ const cx = classNames.bind(styles);
 const ProductBanner = ({ type, title }) => {
   const [bannerImgs, setBannerImgs] = useState([]);
   const [bannerImg, setBannerImg] = useState({});
-  const [loaded, setLoaded] = useState(false);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       const data = await getBannerImgs();
       setBannerImgs(data);
-      setLoaded(true);
+      setLoading(false);
     };
     fetchData();
   }, []);
 
   useEffect(() => {
     setBannerImg(...bannerImgs.filter((img) => img.type === type));
-  }, [loaded, type, bannerImgs]);
-
-  (function a() {
-    console.log(bannerImg);
-  })();
+  }, [loading, type, bannerImgs]);
 
   return (
     <div className={cx('wrapper')}>
