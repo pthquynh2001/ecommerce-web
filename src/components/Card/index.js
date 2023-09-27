@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import { faHeart } from '@fortawesome/free-regular-svg-icons';
+// import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
@@ -13,9 +13,9 @@ const Card = ({ item }) => {
     <div className={cx('wrapper')}>
       <Link to={`/product/${item.id}`} className={cx('link')}>
         <div className={cx('header')}>
-          <Link to={'/'} className={cx('wishlist')}>
-            <FontAwesomeIcon icon={faHeart} />
-          </Link>
+          {/* <Link to={'/'} className={cx('wishlist')}> */}
+          {/* <FontAwesomeIcon icon={faHeart} /> */}
+          {/* </Link> */}
           <div className={cx('img')}>
             <img
               className={cx('main-img')}
