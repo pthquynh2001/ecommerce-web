@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from '../Carousel';
-import { getNewProducts } from '../api/productAPIs';
+import { getNewProducts } from '../api/getAPIs';
 
 const NewProducts = () => {
   return (

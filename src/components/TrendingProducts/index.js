@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from '../Carousel';
-import { getTrendingProducts } from '../api/productAPIs';
+import { getTrendingProducts } from '../api/getAPIs';
 
 const TrendingProducts = () => {
   return (

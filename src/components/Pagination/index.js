@@ -19,8 +19,8 @@ function Pagination(props) {
   const { page, limit, totalItems } = pagination;
   const totalPages = Math.ceil(totalItems / limit);
   const [numbers, setNumbers] = useState([]);
-  const [active, setActive] = useState(1);
-
+  const [active, setActive] = useState(page ? page : 1);
+  console.log('active', active);
   useEffect(() => {
     const newNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
@@ -36,7 +36,6 @@ function Pagination(props) {
       setActive(newPage);
     }
   }
-
   return (
     <div className={cx('wrapper')}>
       <button
@@ -50,7 +49,10 @@ function Pagination(props) {
         {numbers.map((number) => (
           <li
             key={number}
-            className={cx('number', number === active ? 'active' : '')}
+            className={cx(
+              'number',
+              number === parseInt(active) ? 'active' : ''
+            )}
             onClick={() => handlePageChange(number)}
           >
             {number}

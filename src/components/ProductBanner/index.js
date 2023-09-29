@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './ProductBanner.module.scss';
 import { useEffect, useState } from 'react';
-import { getBannerImgs } from '../api/imageAPIs';
+import { getBannerImgs } from '../api/getAPIs';
 
 const cx = classNames.bind(styles);
 

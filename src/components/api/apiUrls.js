@@ -12,7 +12,22 @@ export const PRODUCT_BANNER_IMGS_URL = `https://650e1033a8b42265ec2ceca1.mockapi
 export const SLIDER_IMGS_URL = `https://65040a43c8869921ae246c4c.mockapi.io/api/slider`;
 
 // NEW_PRODUCT  url
-export const NEW_PRODUCTS_URL = `https://65040a43c8869921ae246c4c.mockapi.io/api/new-products`;
+export const NEW_PRODUCTS_URL = `https://6515be3309e3260018c91706.mockapi.io/api/products?collection=new`;
 
 // TRENDING_PRODUCT  url
-export const TRENDING_PRODUCTS_URL = `https://65040a43c8869921ae246c4c.mockapi.io/api/new-products`;
+export const TRENDING_PRODUCTS_URL = `https://6515be3309e3260018c91706.mockapi.io/api/products?collection=trending`;
+
+// collection list names
+export const COLLECTION_NAMES_URL = `https://6515be3309e3260018c91706.mockapi.io/api/collection-names`;
+
+// featured products list
+export const FEATURED_PRODUCTS_URL = `https://6515be3309e3260018c91706.mockapi.io/api/products?featured=true`;
+
+// BATH products list
+export const BATH_PRODUCTS_URL = `https://6515be3309e3260018c91706.mockapi.io/api/products?cat=bath`;
+
+// SHOWER products list
+export const SHOWER_PRODUCTS_URL = `https://6515be3309e3260018c91706.mockapi.io/api/products?cat=shower`;
+
+// HAIR products list
+export const HAIR_PRODUCTS_URL = `https://6515be3309e3260018c91706.mockapi.io/api/products?cat=hair`;

@@ -2,6 +2,8 @@ import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import logo from '../../assets/images/logo.png';
 import ProductsMenu from './ProductsMenu';
+// import { getCollectionNames } from '../api/getAPIs';
+// import { useState, useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -36,6 +38,7 @@ function Header() {
             <Link to='/' className={cx('title')}>
               Products
             </Link>
+
             <ProductsMenu state={open ? 'active' : 'inactive'} />
           </li>
           <li className={cx('nav-item')}>

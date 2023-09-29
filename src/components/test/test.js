@@ -1,22 +1,22 @@
 const products = [];
 
-for (let i = 10; i <= 50; i++) {
-  // Tăng biến i lên 1 đơn vị
-  i++;
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 
-  // Tạo đối tượng sản phẩm với giá trị của biến i
+for (let i = 101; i <= 110; i++) {
   const product = {
-    name: `name ${i}`,
-    mainImg:
-      'https://res.cloudinary.com/dencxhraw/image/upload/v1694773632/lush-image/new-products/00823_1_zo8b93.jpg',
-    secondImg:
-      'https://res.cloudinary.com/dencxhraw/image/upload/v1694773635/lush-image/new-products/00823_2_loq3bz.jpg',
-    price: i,
-    size: i,
-    tagline: `tagline ${i}`,
-    type: `type ${i}`,
-    badgeId: i,
     id: i,
+    name: 'Product Name',
+    mainImg:
+      'https://res.cloudinary.com/dencxhraw/image/upload/v1695929834/lush-image/new-products/Infrawig2_900x_otg132.webp',
+    secondImg:
+      'https://res.cloudinary.com/dencxhraw/image/upload/v1695929838/lush-image/new-products/Infrawig4_900x_ggdeha.webp',
+    cat: 'hair',
+    type: 'Styling',
+    tagline: 'tagline',
+    price: getRandomInt(100),
+    collection: '',
   };
   products.push(product);
 }
