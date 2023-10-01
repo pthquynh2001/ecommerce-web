@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Carousel.module.scss';
 import Card from '../Card';
+import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,7 +11,7 @@ import {
 
 const cx = classNames.bind(styles);
 
-function Carousel({ productAPI, title }) {
+function Carousel({ productAPI, title, showMoreLink }) {
   const [productImages, setProductImages] = useState([]);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -56,13 +57,11 @@ function Carousel({ productAPI, title }) {
     } else {
       setScrollLeft((carouselRef.current.scrollLeft += scrollAmount));
     }
-    console.log(carouselRef.current.scrollWidth);
-    console.log(carouselRef.current.scrollLeft);
   };
 
   return (
     <div className={cx('wrapper')}>
-      <div className={cx('inner')}>
+      <div className={cx('inner', 'grid', 'wide')}>
         <h2 className={cx('title')}>{title}</h2>
         <div className={cx('container')}>
           <div
@@ -87,6 +86,11 @@ function Carousel({ productAPI, title }) {
             <FontAwesomeIcon icon={faChevronRight} />
           </div>
         </div>
+        <Link to={showMoreLink}>
+          <button className={cx('show-more-btn', 'btn')}>
+            <p className={cx('btn-text')}>Show More</p>
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
 .wrapper {
   width: 100%;
   color: #000;
-  min-height: 300px;
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 0;
   right: 0;
   background: #fff;
@@ -23,24 +22,24 @@
 .wrapper.active {
   opacity: 1;
   visibility: visible;
-  top: 90%;
+  top: 99%;
 }
 .wrapper.inactive {
   opacity: 0;
   visibility: hidden;
 }
 .inner {
-  padding: 20px 40px 40px;
-  width: 1200px;
+  padding: 20px 80px 40px;
+  width: 80%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
   position: relative;
 }
 .title {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   position: relative;
   a {
     padding: 4px 0;
@@ -48,10 +47,10 @@
   }
 }
 .sub-category {
-  margin-top: 20px;
+  margin-top: 18px;
   & a {
     position: relative;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
     font-weight: 400;
     display: inline-block;

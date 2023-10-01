@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 function Footer() {
   return (
     <footer className={cx('wrapper')}>
-      <div className={cx('inner')}>
+      <div className={cx('inner', 'grid', 'wide')}>
         <div className={cx('info')}>
           <div className={cx('subcribe')}>
             <h2 className={cx('title')}>Want more LUSH?</h2>
@@ -59,15 +59,12 @@ function Footer() {
             <p>Privacy Notice for Employees, Workers and Contractors</p>
           </div>
         </div>
-      </div>
-
-      <div className={cx('full-inner')}>
         <div className={cx('payment')}>
           <img src={payment} alt='Payment' className={cx('payment-img')} />
         </div>
       </div>
-      <div className={cx('full-inner')}>
-        <div className={cx('copy-right')}>
+      <div className={cx('full-inner', 'grid')}>
+        <div className={cx('copy-right', 'grid', 'wide')}>
           <div className={cx('copy-right-text')}>
             Copyright © 1995–2023 Lush Retail Ltd.
           </div>

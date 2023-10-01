@@ -1,13 +1,22 @@
-.link {
-  text-decoration: none;
-  color: #000;
-}
+// .link {
+//   position: absolute;
+//   text-decoration: none;
+//   color: #000;
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+// }
 .wrapper {
   position: relative;
   width: 100%;
   min-width: 210px;
   background: #fff;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+  &:hover {
+    box-shadow: 0 0 8px #ccc;
+    transform: translate(1px, 1px);
+  }
 }
 .header {
   display: flex;
@@ -26,7 +35,7 @@
     font-size: 30px;
     color: #000;
   }
-  .img {
+  .img-link {
     width: 100%;
     height: auto;
     padding-bottom: 100%;
@@ -38,14 +47,22 @@
       position: absolute;
       left: 0;
       top: 0;
+      transition: all 0.3s;
     }
     .main-img {
-      z-index: 1;
+      // z-index: 1;
+      opacity: 1;
+    }
+    .second-img {
+      // z-index: 1;
+      opacity: 0;
     }
   }
   &:hover .second-img {
-    z-index: 1;
+    // z-index: 1;
+    opacity: 1;
   }
+
   .cart {
     font-size: 15px;
     padding: 10px 20px;
@@ -60,13 +77,42 @@
     transition: all 0.3s;
     text-align: center;
     opacity: 0;
+    transition: all 0.3;
+    overflow: hidden;
+    cursor: pointer;
+
+    & .cart-text {
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        transition: 3px all;
+        position: absolute;
+        background: linear-gradient(
+          310deg,
+          rgba(0, 0, 0, 0),
+          #fff 50%,
+          rgba(0, 0, 0, 0)
+        );
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+    &:hover .cart-text::after {
+      transition: 1s ease-out;
+      transform: translateX(200%);
+      opacity: 0.8;
+      visibility: visible;
+    }
   }
   &:hover .cart {
     transform: translate(-50%, -122%);
     opacity: 1;
   }
 }
-
 .body {
   display: flex;
   flex-direction: column;
@@ -84,18 +130,38 @@
     color: rgb(0 0 0 /60%);
     font-size: 14px;
   }
-  .name {
-    font-family: lushHandwritten !important;
+  .name-link {
+    text-decoration: none;
 
-    text-transform: uppercase;
+    & .name {
+      font-family: lushHandwritten !important;
+      text-transform: uppercase;
+      color: #000;
+      position: relative;
+      font-size: 24px;
+      margin-bottom: 15px;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background: #000;
+        transition: all 0.3s ease-in-out;
+        // transform: translateX(-50%);
+      }
+    }
+    &:hover > .name::after {
+      width: 80%;
+    }
   }
+
   .tagline {
-  }
-  .price-size {
   }
   .price {
     font-weight: 700;
-  }
-  .size {
   }
 }

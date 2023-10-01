@@ -5,7 +5,11 @@ import { getNewProducts } from '../api/getAPIs';
 const NewProducts = () => {
   return (
     <div className='new-products'>
-      <Carousel productAPI={getNewProducts} title='New Products' />
+      <Carousel
+        productAPI={getNewProducts}
+        title='New Products'
+        showMoreLink='/collections/featured'
+      />
     </div>
   );
 };

@@ -20,7 +20,7 @@ const Categories = () => {
   // END fetch API
 
   return (
-    <div className={cx('wrapper')}>
+    <div className={cx('wrapper', 'divider')}>
       <div className={cx('inner')}>
         <h2 className={cx('title')}>Categories</h2>
         <div className={cx('container')}>
@@ -30,8 +30,8 @@ const Categories = () => {
               className={cx('type')}
               key={img.id}
             >
-              <div className={cx('category-btn')}>
-                <div className={cx('name')} key={img.id}>
+              <div className={cx('category-btn', 'btn')}>
+                <div className={cx('category-name', 'btn-text')} key={img.id}>
                   {img.type}
                 </div>
               </div>

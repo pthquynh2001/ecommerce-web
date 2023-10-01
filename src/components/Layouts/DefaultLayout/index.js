@@ -1,9 +1,17 @@
 import Footer from '../../Footer';
 import Header from '../../Header';
 
-import { Fragment } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 
 function DefaultLayout({ children }) {
+  const [scrolledToTop, setScrolledToTop] = useState(false);
+
+  useEffect(() => {
+    if (!scrolledToTop) {
+      window.scrollTo(0, 0);
+      setScrolledToTop(true);
+    }
+  }, [scrolledToTop]);
   return (
     <Fragment>
       <Header />

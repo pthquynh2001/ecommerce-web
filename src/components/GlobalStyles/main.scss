@@ -35,3 +35,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn {
+  height: 40px;
+  min-width: 40px;
+  border: none;
+  background: #000;
+  overflow: hidden;
+  cursor: pointer;
+  .btn-text {
+    display: block;
+    height: 100%;
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    line-height: 40px;
+    padding: 0 15px;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      background: linear-gradient(
+        300deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.264),
+        #fff 50%,
+        rgba(0, 0, 0, 0.264),
+        rgba(0, 0, 0, 0)
+      );
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  &:hover .btn-text::after {
+    transition: 0.8s ease-out;
+    transform: translateX(200%);
+    opacity: 0.8;
+    visibility: visible;
+  }
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    transparent,
+    rgba(0 0 0 /0.1),
+    transparent,
+    transparent
+  );
+}

@@ -20,9 +20,11 @@ const App = () => {
                 key={index}
                 path={route.path}
                 element={
-                  <Layout>
-                    <Page />
-                  </Layout>
+                  <>
+                    <Layout>
+                      <Page />
+                    </Layout>
+                  </>
                 }
               />
             );

@@ -4,7 +4,7 @@ import { getTrendingProducts } from '../api/getAPIs';
 
 const TrendingProducts = () => {
   return (
-    <div className='trending-products'>
+    <div className='trending-products divider' style={{ position: 'relative' }}>
       <Carousel productAPI={getTrendingProducts} title='Trending Products' />
     </div>
   );

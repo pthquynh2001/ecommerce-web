@@ -2,17 +2,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 64px 0;
+  padding: 75px 0 125px;
 }
 .inner {
   // overflow: hidden;
-  max-width: 1200px;
+  position: relative;
+  // max-width: 1365px;
 }
 .title {
   text-transform: uppercase;
   width: 100%;
   text-align: center;
-  margin-bottom: 32px;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
 }
 .container {
   position: relative;
@@ -37,9 +41,16 @@
   }
 }
 .carousel {
-  width: 95%;
+  padding: 15px 0;
   white-space: nowrap;
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
+  width: calc(100% - 50px);
+}
+.show-more-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
 }

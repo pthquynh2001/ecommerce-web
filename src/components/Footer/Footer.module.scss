@@ -3,14 +3,19 @@
   background: #000;
   color: #fff;
   bottom: 0;
-  padding-top: 64px;
+  padding-top: 75px;
 
   a {
     color: #fff;
     font-weight: 700;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
   }
   p {
     font-size: 14px;
+
     &:not(:only-of-type) {
       overflow: hidden;
       white-space: nowrap;
@@ -18,96 +23,99 @@
     }
   }
 }
-.full-inner,
-.inner,
-.payment,
-.copy-right {
-  display: flex;
-  position: relative;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-.inner,
-.payment,
-.copy-right {
-  width: 1200px;
-}
+
 .info {
   display: flex;
   margin-bottom: 64px;
+  .title {
+    margin-bottom: 32px;
+  }
 }
 .subcribe {
   p {
     max-width: 50%;
     text-align: justify;
   }
-}
-.email-form {
-  position: relative;
-  display: flex;
-  width: 50%;
-  height: 48px;
-  box-sizing: content-box;
-  margin: 24px 0;
-
-  .email-input {
-    width: 100%;
-    background: rgb(51 51 51);
-    outline: 1px rgb(51 51 51) solid;
-    border-radius: 2px;
-    border: none;
-    color: #fff;
-    padding: 12px 48px 12px 12px;
-    &:hover {
-      outline: 1px #fff solid;
-    }
-    &:focus {
-      outline: 1px #fff solid;
-    }
-  }
-
-  .email-send-btn {
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    padding: 16px;
-    height: 48px;
+  .email-form {
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+    width: 50%;
+    height: 48px;
+    box-sizing: content-box;
+    margin: 24px 0;
+
+    .email-input {
+      width: 100%;
+      background: rgb(51 51 51);
+      outline: 1px rgb(51 51 51) solid;
+      border-radius: 2px;
+      border: none;
+      color: #fff;
+      padding: 12px 48px 12px 12px;
+      &:hover {
+        outline: 1px #fff solid;
+      }
+      &:focus {
+        outline: 1px #fff solid;
+      }
+    }
+    .email-send-btn {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      padding: 16px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
   }
 }
-
 .service {
   padding-right: 32px;
   width: 20%;
+  p {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
 }
 .about-us {
   width: 20%;
   float: right;
-}
-
-.title {
-  margin-bottom: 32px;
-}
-
-.full-inner {
-  padding: 32px;
-  &:last-child {
-    border-top: 1px rgb(255 255 255 / 20%) solid;
+  p {
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
   }
 }
 
-.payment-img {
-  width: 30%;
-  position: absolute;
-  left: 0;
+.payment {
+  height: 50px;
+  position: relative;
+  margin-bottom: 20px;
+  .payment-img {
+    width: 30%;
+    position: absolute;
+    left: 0;
+  }
 }
-.copy-right-text {
-  position: absolute;
-  right: 0;
-  align-self: center;
-  font-size: 14px;
+.full-inner {
+  border-top: 1px rgb(255 255 255 / 20%) solid;
+  .copy-right {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    &-text {
+      position: absolute;
+      right: 0;
+      align-self: center;
+      font-size: 14px;
+    }
+  }
 }

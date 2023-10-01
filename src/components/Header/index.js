@@ -4,7 +4,7 @@ import logo from '../../assets/images/logo.png';
 import ProductsMenu from './ProductsMenu';
 // import { getCollectionNames } from '../api/getAPIs';
 // import { useState, useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -18,9 +18,24 @@ const cx = classNames.bind(styles);
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const headerRef = useRef();
+  useEffect(() => {
+    function auto() {
+      window.scrollTo(0, 0);
+    }
+    auto();
+  }, []);
+  useEffect(() => {
+    document.onscroll = function () {
+      const newHeight = 88 - (window.scrollY - 600);
+      window.scrollY > 600
+        ? (headerRef.current.style.height = `${newHeight}px`)
+        : (headerRef.current.style.height = '');
+    };
+  }, []);
 
   return (
-    <header className={cx('wrapper')}>
+    <header className={cx('wrapper')} ref={headerRef}>
       <div className={cx('inner')}>
         <Link to='/' className={cx('logo')}>
           <img src={logo} alt='LOGO' className={cx('logo-img')} />
