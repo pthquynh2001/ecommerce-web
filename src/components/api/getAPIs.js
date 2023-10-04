@@ -5,6 +5,7 @@ import {
   CATEGORY_IMGS_URL,
   PRODUCT_BANNER_IMGS_URL,
   COLLECTION_NAMES_URL,
+  FILTERS_URL,
 } from './apiUrls';
 
 export const getNewProducts = async () => {
@@ -52,6 +53,15 @@ export const getBannerImgs = async () => {
 export const getCollectionNames = async () => {
   try {
     const response = await fetch(COLLECTION_NAMES_URL);
+    return response.json();
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const getFilterNames = async () => {
+  try {
+    const response = await fetch(FILTERS_URL);
     return response.json();
   } catch (err) {
     console.log(err);

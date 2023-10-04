@@ -9,7 +9,10 @@
     "tagline": "tagline",
     "price": 90,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Sweet Citrus",
+    "keyIng": "Shea Butter",
+    "color": "Orange"
   },
   {
     "id": 2,
@@ -21,7 +24,10 @@
     "tagline": "tagline",
     "price": 99,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Woody",
+    "keyIng": "Olive Oil",
+    "color": "White"
   },
   {
     "id": 3,
@@ -33,7 +39,10 @@
     "tagline": "tagline",
     "price": 57,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fruity",
+    "keyIng": "Almond",
+    "color": "Pink"
   },
   {
     "id": 4,
@@ -45,7 +54,10 @@
     "tagline": "tagline",
     "price": 37,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fresh",
+    "keyIng": "Coconut",
+    "color": "Multi"
   },
   {
     "id": 5,
@@ -57,7 +69,10 @@
     "tagline": "tagline",
     "price": 63,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Argan",
+    "color": "Purple"
   },
   {
     "id": 6,
@@ -69,7 +84,10 @@
     "tagline": "tagline",
     "price": 4,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Floral",
+    "keyIng": "Citrus",
+    "color": "Golden"
   },
   {
     "id": 7,
@@ -81,7 +99,10 @@
     "tagline": "tagline",
     "price": 50,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Citrus",
+    "color": "Yellow"
   },
   {
     "id": 8,
@@ -93,7 +114,10 @@
     "tagline": "tagline",
     "price": 65,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fresh",
+    "keyIng": "Olive Oil",
+    "color": "Purple"
   },
   {
     "id": 9,
@@ -105,7 +129,10 @@
     "tagline": "tagline",
     "price": 2,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Herbal",
+    "keyIng": "Avocado",
+    "color": "Blue"
   },
   {
     "id": 10,
@@ -117,7 +144,10 @@
     "tagline": "tagline",
     "price": 65,
     "featured": true,
-    "collection": "Halloween"
+    "collection": "Halloween",
+    "scent": "Woody",
+    "keyIng": "Mint",
+    "color": "Pink"
   },
   {
     "id": 11,
@@ -129,7 +159,10 @@
     "tagline": "tagline",
     "price": 51,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Lavender",
+    "color": "Blue"
   },
   {
     "id": 12,
@@ -141,7 +174,10 @@
     "tagline": "tagline",
     "price": 79,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Woody",
+    "keyIng": "Olive Oil",
+    "color": "Pink"
   },
   {
     "id": 13,
@@ -153,7 +189,10 @@
     "tagline": "tagline",
     "price": 47,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fresh",
+    "keyIng": "Citrus",
+    "color": "Pink"
   },
   {
     "id": 14,
@@ -165,7 +204,10 @@
     "tagline": "tagline",
     "price": 67,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Floral",
+    "keyIng": "Cocoa Butter",
+    "color": "Golden"
   },
   {
     "id": 15,
@@ -177,7 +219,10 @@
     "tagline": "tagline",
     "price": 19,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Minty",
+    "keyIng": "Coconut",
+    "color": "Silver"
   },
   {
     "id": 16,
@@ -189,7 +234,10 @@
     "tagline": "tagline",
     "price": 97,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Woody",
+    "keyIng": "Salt",
+    "color": "Blue"
   },
   {
     "id": 17,
@@ -201,7 +249,10 @@
     "tagline": "tagline",
     "price": 59,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Woody",
+    "keyIng": "Coconut",
+    "color": "Silver"
   },
   {
     "id": 18,
@@ -213,7 +264,10 @@
     "tagline": "tagline",
     "price": 78,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Sweet Citrus",
+    "keyIng": "Coconut",
+    "color": "Golden"
   },
   {
     "id": 19,
@@ -225,7 +279,10 @@
     "tagline": "tagline",
     "price": 43,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Almond",
+    "color": "Pink"
   },
   {
     "id": 20,
@@ -237,7 +294,10 @@
     "tagline": "tagline",
     "price": 83,
     "featured": true,
-    "collection": "Halloween"
+    "collection": "Halloween",
+    "scent": "Fruity",
+    "keyIng": "Mint",
+    "color": "Golden"
   },
   {
     "id": 21,
@@ -249,7 +309,10 @@
     "tagline": "tagline",
     "price": 91,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Argan",
+    "color": "Blue"
   },
   {
     "id": 22,
@@ -261,7 +324,10 @@
     "tagline": "tagline",
     "price": 2,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fruity",
+    "keyIng": "Cocoa Butter",
+    "color": "Yellow"
   },
   {
     "id": 23,
@@ -273,7 +339,10 @@
     "tagline": "tagline",
     "price": 9,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Floral",
+    "keyIng": "Coconut",
+    "color": "Silver"
   },
   {
     "id": 24,
@@ -285,7 +354,10 @@
     "tagline": "tagline",
     "price": 36,
     "featured": true,
-    "collection": "Barbie"
+    "collection": "Barbie",
+    "scent": "Spicy",
+    "keyIng": "Rose",
+    "color": "Blue"
   },
   {
     "id": 25,
@@ -297,7 +369,10 @@
     "tagline": "tagline",
     "price": 50,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Floral",
+    "keyIng": "Cocoa Butter",
+    "color": "Green"
   },
   {
     "id": 26,
@@ -309,7 +384,10 @@
     "tagline": "tagline",
     "price": 24,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Minty",
+    "keyIng": "Shea Butter",
+    "color": "Black"
   },
   {
     "id": 27,
@@ -321,7 +399,10 @@
     "tagline": "tagline",
     "price": 39,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Salt",
+    "color": "Orange"
   },
   {
     "id": 28,
@@ -333,7 +414,10 @@
     "tagline": "tagline",
     "price": 76,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fruity",
+    "keyIng": "Almond",
+    "color": "Orange"
   },
   {
     "id": 29,
@@ -345,7 +429,10 @@
     "tagline": "tagline",
     "price": 26,
     "featured": true,
-    "collection": "Barbie"
+    "collection": "Barbie",
+    "scent": "Minty",
+    "keyIng": "Olive Oil",
+    "color": "Pink"
   },
   {
     "id": 30,
@@ -357,7 +444,10 @@
     "tagline": "tagline",
     "price": 76,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Minty",
+    "keyIng": "Avocado",
+    "color": "Blue"
   },
   {
     "id": 31,
@@ -369,7 +459,10 @@
     "tagline": "tagline",
     "price": 66,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Woody",
+    "keyIng": "Coconut",
+    "color": "Yellow"
   },
   {
     "id": 32,
@@ -381,7 +474,10 @@
     "tagline": "tagline",
     "price": 93,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Minty",
+    "keyIng": "Argan",
+    "color": "White"
   },
   {
     "id": 33,
@@ -393,7 +489,10 @@
     "tagline": "tagline",
     "price": 95,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Lavender",
+    "color": "Blue"
   },
   {
     "id": 34,
@@ -405,7 +504,10 @@
     "tagline": "tagline",
     "price": 34,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Fresh",
+    "keyIng": "Shea Butter",
+    "color": "Green"
   },
   {
     "id": 35,
@@ -417,7 +519,10 @@
     "tagline": "tagline",
     "price": 33,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Salt",
+    "color": "Silver"
   },
   {
     "id": 36,
@@ -429,7 +534,10 @@
     "tagline": "tagline",
     "price": 63,
     "featured": true,
-    "collection": "Barbie"
+    "collection": "Barbie",
+    "scent": "Fruity",
+    "keyIng": "Salt",
+    "color": "Pink"
   },
   {
     "id": 37,
@@ -441,7 +549,10 @@
     "tagline": "tagline",
     "price": 3,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Argan",
+    "color": "Pink"
   },
   {
     "id": 38,
@@ -453,7 +564,10 @@
     "tagline": "tagline",
     "price": 38,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Lavender",
+    "color": "Pink"
   },
   {
     "id": 39,
@@ -465,7 +579,10 @@
     "tagline": "tagline",
     "price": 2,
     "featured": true,
-    "collection": "Halloween"
+    "collection": "Halloween",
+    "scent": "Floral",
+    "keyIng": "Almond",
+    "color": "Black"
   },
   {
     "id": 40,
@@ -477,7 +594,10 @@
     "tagline": "tagline",
     "price": 11,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Floral",
+    "keyIng": "Salt",
+    "color": "Pink"
   },
   {
     "id": 41,
@@ -489,7 +609,10 @@
     "tagline": "tagline",
     "price": 41,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Woody",
+    "keyIng": "Cocoa Butter",
+    "color": "Blue"
   },
   {
     "id": 42,
@@ -501,7 +624,10 @@
     "tagline": "tagline",
     "price": 84,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Floral",
+    "keyIng": "Rose",
+    "color": "Green"
   },
   {
     "id": 43,
@@ -513,7 +639,10 @@
     "tagline": "tagline",
     "price": 22,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Floral",
+    "keyIng": "Salt",
+    "color": "Yellow"
   },
   {
     "id": 44,
@@ -525,7 +654,10 @@
     "tagline": "tagline",
     "price": 32,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Woody",
+    "keyIng": "Rose",
+    "color": "Green"
   },
   {
     "id": 45,
@@ -537,7 +669,10 @@
     "tagline": "tagline",
     "price": 20,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Woody",
+    "keyIng": "Shea Butter",
+    "color": "Black"
   },
   {
     "id": 46,
@@ -549,7 +684,10 @@
     "tagline": "tagline",
     "price": 92,
     "featured": true,
-    "collection": "Barbie"
+    "collection": "Barbie",
+    "scent": "Fruity",
+    "keyIng": "Argan",
+    "color": "Black"
   },
   {
     "id": 47,
@@ -561,7 +699,10 @@
     "tagline": "tagline",
     "price": 83,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Woody",
+    "keyIng": "Cocoa Butter",
+    "color": "Green"
   },
   {
     "id": 48,
@@ -573,7 +714,10 @@
     "tagline": "tagline",
     "price": 16,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Mint",
+    "color": "Orange"
   },
   {
     "id": 49,
@@ -585,7 +729,10 @@
     "tagline": "tagline",
     "price": 4,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fresh",
+    "keyIng": "Olive Oil",
+    "color": "Multi"
   },
   {
     "id": 50,
@@ -597,7 +744,10 @@
     "tagline": "tagline",
     "price": 14,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Mint",
+    "color": "Black"
   },
   {
     "id": 51,
@@ -609,7 +759,10 @@
     "tagline": "tagline",
     "price": 5,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Woody",
+    "keyIng": "Mint",
+    "color": "White"
   },
   {
     "id": 52,
@@ -621,7 +774,10 @@
     "tagline": "tagline",
     "price": 36,
     "featured": true,
-    "collection": "Barbie"
+    "collection": "Barbie",
+    "scent": "Minty",
+    "keyIng": "Mint",
+    "color": "Silver"
   },
   {
     "id": 53,
@@ -633,7 +789,10 @@
     "tagline": "tagline",
     "price": 41,
     "featured": true,
-    "collection": "Halloween"
+    "collection": "Halloween",
+    "scent": "Woody",
+    "keyIng": "Coconut",
+    "color": "Purple"
   },
   {
     "id": 54,
@@ -645,7 +804,10 @@
     "tagline": "tagline",
     "price": 76,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Minty",
+    "keyIng": "Citrus",
+    "color": "Green"
   },
   {
     "id": 55,
@@ -657,7 +819,10 @@
     "tagline": "tagline",
     "price": 77,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Fresh",
+    "keyIng": "Mint",
+    "color": "Golden"
   },
   {
     "id": 56,
@@ -669,7 +834,10 @@
     "tagline": "tagline",
     "price": 58,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Avocado",
+    "color": "Golden"
   },
   {
     "id": 57,
@@ -681,7 +849,10 @@
     "tagline": "tagline",
     "price": 38,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Sweet Citrus",
+    "keyIng": "Coconut",
+    "color": "Black"
   },
   {
     "id": 58,
@@ -693,7 +864,10 @@
     "tagline": "tagline",
     "price": 80,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Avocado",
+    "color": "Red"
   },
   {
     "id": 59,
@@ -705,7 +879,10 @@
     "tagline": "tagline",
     "price": 77,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Floral",
+    "keyIng": "Shea Butter",
+    "color": "White"
   },
   {
     "id": 60,
@@ -717,7 +894,10 @@
     "tagline": "tagline",
     "price": 40,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Floral",
+    "keyIng": "Rose",
+    "color": "Multi"
   },
   {
     "id": 61,
@@ -729,7 +909,10 @@
     "tagline": "tagline",
     "price": 59,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fresh",
+    "keyIng": "Lavender",
+    "color": "White"
   },
   {
     "id": 62,
@@ -741,7 +924,10 @@
     "tagline": "tagline",
     "price": 35,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Floral",
+    "keyIng": "Citrus",
+    "color": "Purple"
   },
   {
     "id": 63,
@@ -753,7 +939,10 @@
     "tagline": "tagline",
     "price": 48,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fresh",
+    "keyIng": "Argan",
+    "color": "Pink"
   },
   {
     "id": 64,
@@ -765,7 +954,10 @@
     "tagline": "tagline",
     "price": 92,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Spicy",
+    "keyIng": "Olive Oil",
+    "color": "Golden"
   },
   {
     "id": 65,
@@ -777,7 +969,10 @@
     "tagline": "tagline",
     "price": 65,
     "featured": true,
-    "collection": "Halloween"
+    "collection": "Halloween",
+    "scent": "Floral",
+    "keyIng": "Salt",
+    "color": "Orange"
   },
   {
     "id": 66,
@@ -789,7 +984,10 @@
     "tagline": "tagline",
     "price": 78,
     "featured": true,
-    "collection": "Barbie"
+    "collection": "Barbie",
+    "scent": "Herbal",
+    "keyIng": "Olive Oil",
+    "color": "White"
   },
   {
     "id": 67,
@@ -801,7 +999,10 @@
     "tagline": "tagline",
     "price": 3,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Woody",
+    "keyIng": "Lavender",
+    "color": "Blue"
   },
   {
     "id": 68,
@@ -813,7 +1014,10 @@
     "tagline": "tagline",
     "price": 38,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fresh",
+    "keyIng": "Rose",
+    "color": "Golden"
   },
   {
     "id": 69,
@@ -825,7 +1029,10 @@
     "tagline": "tagline",
     "price": 90,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Floral",
+    "keyIng": "Mint",
+    "color": "Pink"
   },
   {
     "id": 70,
@@ -837,7 +1044,10 @@
     "tagline": "tagline",
     "price": 85,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fruity",
+    "keyIng": "Almond",
+    "color": "Golden"
   },
   {
     "id": 71,
@@ -849,7 +1059,10 @@
     "tagline": "tagline",
     "price": 68,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Minty",
+    "keyIng": "Argan",
+    "color": "Orange"
   },
   {
     "id": 72,
@@ -861,7 +1074,10 @@
     "tagline": "tagline",
     "price": 49,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Coconut",
+    "color": "Yellow"
   },
   {
     "id": 73,
@@ -873,7 +1089,10 @@
     "tagline": "tagline",
     "price": 0,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Minty",
+    "keyIng": "Mint",
+    "color": "Multi"
   },
   {
     "id": 74,
@@ -885,7 +1104,10 @@
     "tagline": "tagline",
     "price": 2,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fresh",
+    "keyIng": "Argan",
+    "color": "White"
   },
   {
     "id": 75,
@@ -897,7 +1119,10 @@
     "tagline": "tagline",
     "price": 12,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Rose",
+    "color": "Red"
   },
   {
     "id": 76,
@@ -909,7 +1134,10 @@
     "tagline": "tagline",
     "price": 85,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Woody",
+    "keyIng": "Citrus",
+    "color": "Golden"
   },
   {
     "id": 77,
@@ -921,7 +1149,10 @@
     "tagline": "tagline",
     "price": 83,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Sweet Citrus",
+    "keyIng": "Almond",
+    "color": "Pink"
   },
   {
     "id": 78,
@@ -933,7 +1164,10 @@
     "tagline": "tagline",
     "price": 43,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fruity",
+    "keyIng": "Rose",
+    "color": "Purple"
   },
   {
     "id": 79,
@@ -945,7 +1179,10 @@
     "tagline": "tagline",
     "price": 85,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Citrus",
+    "color": "Yellow"
   },
   {
     "id": 80,
@@ -957,7 +1194,10 @@
     "tagline": "tagline",
     "price": 1,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fresh",
+    "keyIng": "Citrus",
+    "color": "Purple"
   },
   {
     "id": 81,
@@ -969,7 +1209,10 @@
     "tagline": "tagline",
     "price": 24,
     "featured": true,
-    "collection": "Halloween"
+    "collection": "Halloween",
+    "scent": "Sweet Citrus",
+    "keyIng": "Mint",
+    "color": "White"
   },
   {
     "id": 82,
@@ -981,7 +1224,10 @@
     "tagline": "tagline",
     "price": 65,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Woody",
+    "keyIng": "Avocado",
+    "color": "Multi"
   },
   {
     "id": 83,
@@ -993,7 +1239,10 @@
     "tagline": "tagline",
     "price": 73,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Sweet Citrus",
+    "keyIng": "Almond",
+    "color": "Red"
   },
   {
     "id": 84,
@@ -1005,7 +1254,10 @@
     "tagline": "tagline",
     "price": 22,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Floral",
+    "keyIng": "Rose",
+    "color": "Black"
   },
   {
     "id": 85,
@@ -1017,7 +1269,10 @@
     "tagline": "tagline",
     "price": 57,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Floral",
+    "keyIng": "Citrus",
+    "color": "Purple"
   },
   {
     "id": 86,
@@ -1029,7 +1284,10 @@
     "tagline": "tagline",
     "price": 78,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Herbal",
+    "keyIng": "Avocado",
+    "color": "Multi"
   },
   {
     "id": 87,
@@ -1041,7 +1299,10 @@
     "tagline": "tagline",
     "price": 7,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Fruity",
+    "keyIng": "Shea Butter",
+    "color": "Pink"
   },
   {
     "id": 88,
@@ -1053,7 +1314,10 @@
     "tagline": "tagline",
     "price": 24,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Coconut",
+    "color": "Green"
   },
   {
     "id": 89,
@@ -1065,7 +1329,10 @@
     "tagline": "tagline",
     "price": 14,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Citrus",
+    "color": "Orange"
   },
   {
     "id": 90,
@@ -1077,7 +1344,10 @@
     "tagline": "tagline",
     "price": 61,
     "featured": true,
-    "collection": "Barbie"
+    "collection": "Barbie",
+    "scent": "Floral",
+    "keyIng": "Coconut",
+    "color": "Green"
   },
   {
     "id": 91,
@@ -1089,7 +1359,10 @@
     "tagline": "tagline",
     "price": 42,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Fruity",
+    "keyIng": "Mint",
+    "color": "Red"
   },
   {
     "id": 92,
@@ -1101,7 +1374,10 @@
     "tagline": "tagline",
     "price": 90,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Olive Oil",
+    "color": "Red"
   },
   {
     "id": 93,
@@ -1113,7 +1389,10 @@
     "tagline": "tagline",
     "price": 19,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Spicy",
+    "keyIng": "Coconut",
+    "color": "Blue"
   },
   {
     "id": 94,
@@ -1125,7 +1404,10 @@
     "tagline": "tagline",
     "price": 57,
     "featured": true,
-    "collection": "Halloween"
+    "collection": "Halloween",
+    "scent": "Sweet Citrus",
+    "keyIng": "Mint",
+    "color": "Pink"
   },
   {
     "id": 95,
@@ -1137,7 +1419,10 @@
     "tagline": "tagline",
     "price": 34,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Woody",
+    "keyIng": "Rose",
+    "color": "Blue"
   },
   {
     "id": 96,
@@ -1149,7 +1434,10 @@
     "tagline": "tagline",
     "price": 98,
     "featured": false,
-    "collection": ""
+    "collection": "",
+    "scent": "Sweet Citrus",
+    "keyIng": "Shea Butter",
+    "color": "Yellow"
   },
   {
     "id": 97,
@@ -1161,7 +1449,10 @@
     "tagline": "tagline",
     "price": 14,
     "featured": false,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Minty",
+    "keyIng": "Shea Butter",
+    "color": "Green"
   },
   {
     "id": 98,
@@ -1173,7 +1464,10 @@
     "tagline": "tagline",
     "price": 72,
     "featured": true,
-    "collection": "Trending"
+    "collection": "Trending",
+    "scent": "Floral",
+    "keyIng": "Coconut",
+    "color": "Purple"
   },
   {
     "id": 99,
@@ -1185,7 +1479,10 @@
     "tagline": "tagline",
     "price": 49,
     "featured": true,
-    "collection": "Barbie"
+    "collection": "Barbie",
+    "scent": "Herbal",
+    "keyIng": "Rose",
+    "color": "Green"
   },
   {
     "id": 100,
@@ -1197,6 +1494,9 @@
     "tagline": "tagline",
     "price": 25,
     "featured": true,
-    "collection": "New"
+    "collection": "New",
+    "scent": "Fruity",
+    "keyIng": "Olive Oil",
+    "color": "Silver"
   }
 ]

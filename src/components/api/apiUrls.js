@@ -31,3 +31,6 @@ export const SHOWER_PRODUCTS_URL = `https://6515be3309e3260018c91706.mockapi.io/
 
 // HAIR products list
 export const HAIR_PRODUCTS_URL = `https://6515be3309e3260018c91706.mockapi.io/api/products?cat=hair`;
+
+// Filter products
+export const FILTERS_URL = `https://651cbb7435bd4107e37310ba.mockapi.io/api/filters`;

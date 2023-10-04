@@ -20,7 +20,6 @@ function Pagination(props) {
   const totalPages = Math.ceil(totalItems / limit);
   const [numbers, setNumbers] = useState([]);
   const [active, setActive] = useState(page ? page : 1);
-  console.log('active', active);
   useEffect(() => {
     const newNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
@@ -32,7 +31,6 @@ function Pagination(props) {
   function handlePageChange(newPage) {
     if (onPageChange) {
       onPageChange(newPage);
-      console.log('totalPages', totalPages);
       setActive(newPage);
     }
   }

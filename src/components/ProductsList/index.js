@@ -4,6 +4,7 @@ import Card from '../Card';
 import Pagination from '../Pagination';
 import queryString from 'query-string';
 import { useEffect, useState } from 'react';
+import Filter from './Filter';
 // import { FEATURED_PRODUCTS_URL } from '../api/apiUrls';
 // import { useNavigate } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -33,7 +34,6 @@ const ProductsList = ({ apiUrl, total }) => {
           totalItems: total,
         }
   );
-  console.log(queryString.parse(location.search));
 
   const [filters, setFilters] = useState(
     location.search
@@ -61,8 +61,6 @@ const ProductsList = ({ apiUrl, total }) => {
     fetchData();
   }, [paramString, navigate, apiUrl]);
 
-  console.log(typeof location.search);
-
   //th1- nhan location tu btn
   function handlePageChange(newPage) {
     setPagination({ ...pagination, page: newPage });
@@ -75,55 +73,16 @@ const ProductsList = ({ apiUrl, total }) => {
 
   useEffect(() => {
     setParamString(`${queryString.stringify(filters)}`);
-    // console.log(paramString);
   }, [filters]);
-
-  // th2 - nhan location tu url
-  // const params = location.search;
-  // useEffect(() => {
-  //   setParamString(params);
-  // }, [params]);
-
-  // //1.1
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       // const pramString = queryString.stringify(filters);
-  //       setLoading(true);
-  //       const response = await fetch(
-  //         `${NEW_PRODUCTS_URL}?${queryString.stringify(filters)}`
-  //       );
-  //       const data = await response.json();
-  //       setLoading(false);
-  //       setProducts(data);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   fetchData();
-  // }, [filters]);
-  //1.2
-  // function handlePageChange(newPage) {
-  //   setPagination({ ...pagination, page: newPage });
-  //   setFilters({ ...filters, page: newPage });
-  //   if (!loading) {
-  //     window.scrollTo(0, 500);
-  //     // productsRef.current.scrollTop = 10;
-  //   }
-  // }
-  // //1.3
-  // useEffect(() => {
-  //   navigate(`?${queryString.stringify(filters)}`);
-  // }, [filters, navigate]);
 
   return (
     <div className={cx('wrapper')}>
       <div className={cx('grid', 'wide')}>
         <div className={cx('row')}>
-          <div className={cx('col', 'l-2')}>
-            <div className={cx('filter')}>FILTER</div>
+          <div className={cx('col', 'l-3')}>
+            <Filter />
           </div>
-          <div className={cx('col', 'l-10')}>
+          <div className={cx('col', 'l-9')}>
             <div className={cx('products-list')}>
               <div className={cx('info')}>
                 <div className={cx('product-count')}>
