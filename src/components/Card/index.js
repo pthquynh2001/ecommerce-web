@@ -28,8 +28,8 @@ const Card = ({ item }) => {
           />
         </Link>
 
-        <div className={cx('cart')}>
-          <div className={cx('cart-text')}>
+        <div className={cx('cart', 'btn')}>
+          <div className={cx('cart-text', 'btn-text')}>
             Add to cart <FontAwesomeIcon icon={faCartShopping} />
           </div>
         </div>
@@ -41,7 +41,7 @@ const Card = ({ item }) => {
 
         <div className={cx('type', 'text')}>{item.type}</div>
         <div className={cx('tagline', 'text')}>{item.tagline}</div>
-        <p className={cx('price')}>{item.price} VND</p>
+        <p className={cx('price')}>${item.price}</p>
       </div>
     </div>
   );

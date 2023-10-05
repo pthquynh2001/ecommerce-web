@@ -1,5 +1,4 @@
 .wrapper {
-  margin-top: var(--header-height);
   position: relative;
   overflow: hidden;
 }
@@ -9,12 +8,11 @@
   display: flex;
   flex-shrink: 0;
   transition: all 1.5s linear;
-  height: calc(100vh - var(--header-height));
+  height: 100vh;
   // transition: all 1s ease-out;
   // animation: scroll 5s linear infinite;
   & .slide {
     // flex-basis: 25%;
-    min-width: 100vw;
     // flex-shrink: 0;
     object-fit: cover;
     //

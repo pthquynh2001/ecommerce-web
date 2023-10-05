@@ -27,8 +27,8 @@ function Header() {
   }, []);
   useEffect(() => {
     document.onscroll = function () {
-      const newHeight = 88 - (window.scrollY - 600);
-      window.scrollY > 600
+      const newHeight = 88 - (window.scrollY - 400);
+      window.scrollY > 400
         ? (headerRef.current.style.height = `${newHeight}px`)
         : (headerRef.current.style.height = '');
     };

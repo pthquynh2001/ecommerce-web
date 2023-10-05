@@ -4,7 +4,7 @@ function HeaderOnly({ children }) {
   return (
     <div>
       <Header />
-      <div className='container' style={{ marginTop: 'var(--header-height)' }}>
+      <div className='container'>
         <div className='content'>{children}</div>
       </div>
     </div>

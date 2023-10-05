@@ -64,49 +64,14 @@
   }
 
   .cart {
-    font-size: 15px;
-    padding: 10px 20px;
     position: absolute;
     left: 50%;
     top: 100%;
     width: 92%;
-    transform: translate(-50%, 0);
-    background: #000;
-    color: #fff;
     z-index: 2;
-    transition: all 0.3s;
-    text-align: center;
+    transform: translate(-50%, 0);
+    transition: all 0.3s ease-in-out;
     opacity: 0;
-    transition: all 0.3;
-    overflow: hidden;
-    cursor: pointer;
-
-    & .cart-text {
-      &::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: -100%;
-        transition: 3px all;
-        position: absolute;
-        background: linear-gradient(
-          310deg,
-          rgba(0, 0, 0, 0),
-          #fff 50%,
-          rgba(0, 0, 0, 0)
-        );
-        visibility: hidden;
-        opacity: 0;
-      }
-    }
-    &:hover .cart-text::after {
-      transition: 1s ease-out;
-      transform: translateX(200%);
-      opacity: 0.8;
-      visibility: visible;
-    }
   }
   &:hover .cart {
     transform: translate(-50%, -122%);

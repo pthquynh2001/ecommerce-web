@@ -26,6 +26,10 @@ body {
   line-height: 1.5;
 }
 
+button {
+  font-family: 'Urbanist', sans-serif;
+}
+
 @font-face {
   font-family: lushHandwritten;
   src: url('../../assets/fonts/LushHandwritten_WLat_Bd.otf');
@@ -42,6 +46,7 @@ code {
   border: none;
   background: #000;
   overflow: hidden;
+  text-align: center;
   cursor: pointer;
   .btn-text {
     display: block;

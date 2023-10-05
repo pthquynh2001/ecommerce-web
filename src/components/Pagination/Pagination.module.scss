@@ -16,12 +16,15 @@
   transition: all 0.3s;
   border: none;
   &:hover {
-    opacity: 0.8;
+    opacity: 0.7;
   }
   &:disabled {
     background-color: rgb(234, 234, 234);
     color: #ccc;
     cursor: default;
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 .page-list {
