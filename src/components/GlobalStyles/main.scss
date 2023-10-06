@@ -30,6 +30,11 @@ button {
   font-family: 'Urbanist', sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 @font-face {
   font-family: lushHandwritten;
   src: url('../../assets/fonts/LushHandwritten_WLat_Bd.otf');
@@ -94,7 +99,7 @@ code {
     to right,
     transparent,
     transparent,
-    rgba(0 0 0 /0.1),
+    rgba(0 0 0 /0.3),
     transparent,
     transparent
   );

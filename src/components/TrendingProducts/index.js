@@ -1,11 +1,14 @@
 import React from 'react';
 import Carousel from '../Carousel';
-import { getTrendingProducts } from '../api/getAPIs';
 
 const TrendingProducts = () => {
   return (
     <div className='trending-products divider' style={{ position: 'relative' }}>
-      <Carousel productAPI={getTrendingProducts} title='Trending Products' />
+      <Carousel
+        params={{ collection: 'trending' }}
+        title='Trending Products'
+        showMoreLink='/collections/featured'
+      />
     </div>
   );
 };

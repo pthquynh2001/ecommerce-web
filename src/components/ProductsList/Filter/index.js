@@ -1,8 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Filter.module.scss';
 import PriceFilter from './PriceFilter';
-import Collapsible from './Collapsible';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { getCollectionNames } from '../../api/getAPIs';
 import { getFilterNames } from '../../api/getAPIs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -61,10 +60,18 @@ const Filter = () => {
                     onClick={() => toggleCategory(index)}
                   >
                     <h3 className={cx('sub-title')}>{cat.catName} Products</h3>
-                    <i className={cx('collapsible-icon', 'minus')}>
+                    <i
+                      className={cx('collapsible-icon', 'minus', {
+                        show: openCategories[index],
+                      })}
+                    >
                       <FontAwesomeIcon icon={faMinus} />
                     </i>
-                    <i className={cx('collapsible-icon', 'plus')}>
+                    <i
+                      className={cx('collapsible-icon', 'plus', {
+                        show: !openCategories[index],
+                      })}
+                    >
                       <FontAwesomeIcon icon={faPlus} />
                     </i>
                   </button>
@@ -96,10 +103,18 @@ const Filter = () => {
               onClick={() => toggleFilter(index)}
             >
               <h2 className={cx('title')}>{filter.filterName}</h2>
-              <i className={cx('collapsible-icon', 'minus')}>
+              <i
+                className={cx('collapsible-icon', 'minus', {
+                  show: openFilters[index],
+                })}
+              >
                 <FontAwesomeIcon icon={faMinus} />
               </i>
-              <i className={cx('collapsible-icon', 'plus')}>
+              <i
+                className={cx('collapsible-icon', 'plus', {
+                  show: !openFilters[index],
+                })}
+              >
                 <FontAwesomeIcon icon={faPlus} />
               </i>
             </button>

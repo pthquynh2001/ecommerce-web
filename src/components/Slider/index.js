@@ -27,13 +27,13 @@ function Slider() {
   // END: fetch api
 
   //START: auto slider
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prev) => (prev < slideCount - 1 ? prev + 1 : 0));
-  //     // setIsCoolingDown(true);
-  //   }, 4000);
-  //   return () => clearInterval(interval);
-  // }, [currentSlide, slideCount]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev < slideCount - 1 ? prev + 1 : 0));
+      // setIsCoolingDown(true);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [currentSlide, slideCount]);
 
   // END: auto slider
 

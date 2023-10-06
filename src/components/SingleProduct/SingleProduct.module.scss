@@ -1,0 +1,112 @@
+img {
+  width: 100%;
+}
+
+.wrapper {
+  margin-top: 150px;
+  margin-bottom: 75px;
+}
+.gallery {
+  .thumbs {
+    .thumb-img {
+      margin-bottom: 10px;
+      transition: all 0.3s ease-in-out;
+      opacity: 0.6;
+      box-shadow: 0 0 3px #aeaeae;
+      cursor: pointer;
+      &.selected-thumb {
+        opacity: 1;
+      }
+    }
+  }
+  .selected {
+    .selected-img {
+    }
+  }
+}
+.product-summary {
+  width: 100%;
+  p {
+    margin: 10px 0;
+    text-align: justify;
+  }
+  .name {
+    font-family: lushHandwritten;
+  }
+  .type {
+    text-transform: uppercase;
+    // margin: 15px 0;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .tagline {
+    // margin: 14px 0;
+  }
+  .feature {
+  }
+  .price {
+    // margin: 15px 0;
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+.cart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .quantity {
+    width: 20%;
+    position: relative;
+    .quantity-icon {
+      position: absolute;
+      line-height: 40px;
+      font-size: 15px;
+      color: #000;
+      cursor: pointer;
+      padding: 0 8px;
+      &.minus {
+        left: 0;
+      }
+      &.plus {
+        right: 0;
+      }
+    }
+
+    .quantity-input {
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      font-size: 16px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .cart-btn {
+    width: 75%;
+  }
+}
+.description {
+  position: relative;
+  padding-top: 20px;
+  margin-top: 40px;
+  .desc-title {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .sub-title {
+    margin-top: 10px;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+@keyframes showImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

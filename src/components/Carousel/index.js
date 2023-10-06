@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import styles from './Carousel.module.scss';
 import Card from '../Card';
+import { getProducts } from '../api/getAPIs';
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,8 +12,8 @@ import {
 
 const cx = classNames.bind(styles);
 
-function Carousel({ productAPI, title, showMoreLink }) {
-  const [productImages, setProductImages] = useState([]);
+function Carousel({ params, title, showMoreLink }) {
+  const [products, setProducts] = useState([]);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [loading, setLoading] = useState(true);
   const carouselRef = useRef();
@@ -22,19 +23,19 @@ function Carousel({ productAPI, title, showMoreLink }) {
   // fetch API
   useEffect(() => {
     const fetchData = async () => {
-      const data = await productAPI();
-      setProductImages(data);
+      const data = await getProducts(params);
+      setProducts(data);
       setLoading(false);
     };
     fetchData();
-  }, [productAPI]);
+  }, [params]);
   // END fetch API
 
+  // START an hien chevron
   useEffect(() => {
     if (carouselRef.current) {
       const carouselWidth = carouselRef.current.scrollWidth;
       const containerWidth = carouselRef.current.clientWidth;
-
       if (scrollLeft <= 0) {
         chevronLeftRef.current.style.display = 'none';
       } else {
@@ -48,16 +49,18 @@ function Carousel({ productAPI, title, showMoreLink }) {
       }
     }
   }, [scrollLeft, loading]);
+  // END an hien chevron
 
+  // START manual click chevron
   const handleChevronClick = (direction) => {
     const scrollAmount = carouselRef.current.clientWidth / 4 + 1; // Điều chỉnh giá trị scroll
-    console.log(scrollAmount);
     if (direction === 'left') {
       setScrollLeft((carouselRef.current.scrollLeft -= scrollAmount));
     } else {
       setScrollLeft((carouselRef.current.scrollLeft += scrollAmount));
     }
   };
+  // END manual click chevron
 
   return (
     <div className={cx('wrapper')}>
@@ -72,11 +75,12 @@ function Carousel({ productAPI, title, showMoreLink }) {
             <FontAwesomeIcon icon={faChevronLeft} />
           </div>
           <div className={cx('carousel')} ref={carouselRef}>
-            {productImages.map((item) => (
-              <div className={cx('col', 'l-3')} key={item.id}>
-                <Card item={item} />
-              </div>
-            ))}
+            {products &&
+              products.map((item) => (
+                <div className={cx('col', 'l-3')} key={item.id}>
+                  <Card item={item} />
+                </div>
+              ))}
           </div>
           <div
             className={cx('chevron-btn', 'right')}

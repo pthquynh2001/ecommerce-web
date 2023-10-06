@@ -5,20 +5,16 @@ import Pagination from '../Pagination';
 import queryString from 'query-string';
 import { useEffect, useState } from 'react';
 import Filter from './Filter';
-// import { FEATURED_PRODUCTS_URL } from '../api/apiUrls';
-// import { useNavigate } from 'react-router-dom';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { getProducts } from '../api/getAPIs';
 
 const cx = classNames.bind(styles);
 
-const ProductsList = ({ apiUrl, total }) => {
+const ProductsList = ({ total, featured, cat }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
-  const [paramString, setParamString] = useState(
-    location.search ? location.search.slice(1) : 'limit=12&page=1'
-  );
 
   const queryPage = parseInt(queryString.parse(location.search).page);
   const [pagination, setPagination] = useState(
@@ -35,45 +31,37 @@ const ProductsList = ({ apiUrl, total }) => {
         }
   );
 
+  const filters2 = cat
+    ? { cat, page: 1, limit: 12 }
+    : { featured, page: 1, limit: 12 };
+
   const [filters, setFilters] = useState(
-    location.search
-      ? queryString.parse(location.search)
-      : {
-          page: 1,
-          limit: 12,
-        }
+    location.search ? queryString.parse(location.search) : filters2
   );
 
+  // START: fetch api
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchApi = async () => {
       try {
-        // const pramString = queryString.stringify(filters);
         setLoading(true);
-        const response = await fetch(`${apiUrl}&${paramString}`);
-        const data = await response.json();
-        navigate(`?${paramString}`);
+        const data = await getProducts(filters);
+        navigate(`?${queryString.stringify(filters)}`);
         setLoading(false);
         setProducts(data);
-      } catch (err) {
-        console.log(err);
-      }
+      } catch {}
     };
-    fetchData();
-  }, [paramString, navigate, apiUrl]);
+    fetchApi();
+  }, [filters, navigate]);
+  //END: fetch API
 
-  //th1- nhan location tu btn
+  //TH: nhan location tu btn
   function handlePageChange(newPage) {
     setPagination({ ...pagination, page: newPage });
     setFilters({ ...filters, page: newPage });
     if (!loading) {
       window.scrollTo(0, 500);
-      // productsRef.current.scrollTop = 10;
     }
   }
-
-  useEffect(() => {
-    setParamString(`${queryString.stringify(filters)}`);
-  }, [filters]);
 
   return (
     <div className={cx('wrapper')}>
