@@ -60,7 +60,14 @@ function Footer() {
           </div>
         </div>
         <div className={cx('payment')}>
-          <img src={payment} alt='Payment' className={cx('payment-img')} />
+          <img
+            onMouseDown={(e) => {
+              e.preventDefault();
+            }}
+            src={payment}
+            alt='Payment'
+            className={cx('payment-img')}
+          />
         </div>
       </div>
       <div className={cx('full-inner', 'grid')}>

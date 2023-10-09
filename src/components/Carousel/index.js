@@ -90,11 +90,13 @@ function Carousel({ params, title, showMoreLink }) {
             <FontAwesomeIcon icon={faChevronRight} />
           </div>
         </div>
-        <Link to={showMoreLink}>
-          <button className={cx('show-more-btn', 'btn')}>
-            <p className={cx('btn-text')}>Show More</p>
-          </button>
-        </Link>
+        {showMoreLink && (
+          <Link to={showMoreLink}>
+            <button className={cx('show-more-btn', 'btn')}>
+              <p className={cx('btn-text')}>Show More</p>
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );
