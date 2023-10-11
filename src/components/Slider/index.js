@@ -156,9 +156,6 @@ function Slider() {
               key={img.id}
               id={`radio${index}`}
               checked={currentSlide === index}
-              // onChange={() => {
-              //   setCurrentSlide(index);
-              // }}
               onChange={() => handleSlideChange(index)}
             />
             <span></span>

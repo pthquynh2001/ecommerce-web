@@ -20,7 +20,7 @@ const Cart = ({ state }) => {
       id: 79,
       name: 'Product Name',
       mainImg:
-        'https://img.myshopline.com/image/store/2001263770/1657790597292/Banner_3_1944x.jpeg',
+        'https://res.cloudinary.com/dencxhraw/image/upload/v1695927894/lush-image/new-products/49945b56be7441e6b62ad4d9942e5cdd_900x_sn0fk9.webp',
       secondImg:
         'https://res.cloudinary.com/dencxhraw/image/upload/v1695929325/lush-image/new-products/931dd95d44464cada71d5c3925c00798_900x_sepofm.webp',
       cat: 'hair',
@@ -73,9 +73,9 @@ const Cart = ({ state }) => {
           </button>
         </div>
         <div className={cx('content', 'divider')}>
-          {data.map((product) => {
+          {data.map((product, index) => {
             return (
-              <div className={cx('product')}>
+              <div className={cx('product')} key={index}>
                 <div className={cx('row')}>
                   <div className={cx('col', 'l-4')}>
                     <div className={cx('img-holder')}>
@@ -127,7 +127,7 @@ const Cart = ({ state }) => {
           </p>
           <Link to='/cart'>
             <div className={cx('btn')} onClick={() => setIsOpen(!isOpen)}>
-              <p className={cx('btn-text')}>VIEW CART</p>
+              <p className={cx('btn-text')}>CHECKOUT</p>
             </div>
           </Link>
         </div>

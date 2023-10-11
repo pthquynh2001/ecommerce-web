@@ -8,7 +8,6 @@ const Explore = () => {
   const leftCardRef = useRef();
   const rightCardRef = useRef();
   if (leftCardRef.current && rightCardRef.current) {
-    console.log(leftCardRef.current.clientHeight);
     if (leftCardRef.current.clientHeight > rightCardRef.current.clientHeight) {
       rightCardRef.current.style.height = `${leftCardRef.current.clientHeight}px`;
     } else {

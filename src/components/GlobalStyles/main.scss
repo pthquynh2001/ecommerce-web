@@ -89,6 +89,11 @@ code {
   }
 }
 
+.btn.btn-shadow:hover {
+  box-shadow: 0 0 5px #aeaeae;
+  transition: box-shadow 0.3s ease-in;
+}
+
 .input-wrapper {
   position: relative;
   display: flex;
