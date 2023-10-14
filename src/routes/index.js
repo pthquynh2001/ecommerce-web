@@ -1,4 +1,4 @@
-// import { HeaderOnly } from '../components/Layouts';
+import { SinglePage } from '../components/Layouts';
 
 import Home from '../pages/Home';
 import BathProducts from '../pages/BathProducts';
@@ -7,10 +7,12 @@ import HairProducts from '../pages/HairProducts';
 import ProductDetails from '../pages/ProductDetails';
 import FeaturedProducts from '../pages/FeaturedProducts';
 import Cart from '../pages/Cart';
+import About from '../pages/About';
 
 //ai cung xem duoc, khong can dang nhap
 const publicRoutes = [
   { path: '/', component: Home },
+  { path: '/about', component: About, layout: SinglePage },
   { path: '/collections/featured', component: FeaturedProducts, exact: true },
   {
     path: '/collections/bath',

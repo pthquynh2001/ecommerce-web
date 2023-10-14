@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
-import logo from '../../assets/images/logo.png';
+import Logo from '../Logo';
 import ProductsMenu from './ProductsMenu';
 import Cart from '../Cart';
 import { useState, useEffect, useRef } from 'react';
@@ -25,12 +25,21 @@ function Header() {
     }
     auto();
   }, []);
+
   useEffect(() => {
-    document.onscroll = function () {
-      const newHeight = 88 - (window.scrollY - 400);
-      window.scrollY > 400
-        ? (headerRef.current.style.height = `${newHeight}px`)
-        : (headerRef.current.style.height = '');
+    if (headerRef.current) {
+      console.log(window.scrollY);
+      document.onscroll = function () {
+        const newHeight = 88 - (window.scrollY - 200);
+        if (window.scrollY > 200) {
+          headerRef.current.style.height = `${newHeight}px`;
+        } else {
+          headerRef.current.style.height = '';
+        }
+      };
+    }
+    return () => {
+      document.onscroll = null;
     };
   }, []);
 
@@ -38,8 +47,8 @@ function Header() {
     <>
       <header className={cx('wrapper')} ref={headerRef}>
         <div className={cx('inner')}>
-          <Link to='/' className={cx('logo')}>
-            <img src={logo} alt='LOGO' className={cx('logo-img')} />
+          <Link to='/'>
+            <Logo />
           </Link>
           <ul className={cx('navbar')}>
             <li
@@ -69,7 +78,7 @@ function Header() {
               </Link>
             </li>
             <li className={cx('nav-item')}>
-              <Link to='/' className={cx('title')}>
+              <Link to='/about' className={cx('title')}>
                 About Us
               </Link>
             </li>
