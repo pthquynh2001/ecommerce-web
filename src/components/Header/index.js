@@ -28,7 +28,6 @@ function Header() {
 
   useEffect(() => {
     if (headerRef.current) {
-      console.log(window.scrollY);
       document.onscroll = function () {
         const newHeight = 88 - (window.scrollY - 200);
         if (window.scrollY > 200) {
@@ -67,7 +66,7 @@ function Header() {
               <ProductsMenu state={openMenu ? 'active' : 'inactive'} />
             </li>
             <li className={cx('nav-item')}>
-              <Link to='/' className={cx('title')}>
+              <Link to='/article' className={cx('title')}>
                 Articles
               </Link>
             </li>

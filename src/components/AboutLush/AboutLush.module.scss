@@ -11,7 +11,6 @@
 }
 
 .left {
-  display: flex;
   flex: 0 0 50%;
   max-width: 50%;
   background: #f3f3f3;
@@ -31,10 +30,8 @@
 }
 
 .module {
-  // overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: center;
   width: 100%;
   &.black {
     background: #000;
@@ -49,8 +46,7 @@
 .sticky-block {
   position: -webkit-sticky;
   position: sticky;
-  top: 200px;
-  bottom: 50px;
+  top: 300px;
 }
 .text {
   width: 100%;

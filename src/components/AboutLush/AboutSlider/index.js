@@ -86,38 +86,50 @@ const AboutSlider = () => {
   const carouselRef = useRef();
   const sliderRef = useRef();
 
-  useEffect(() => {}, []);
+  // START: set Cooldown tranh manual click nhieu lan
+  const [isCoolingDown, setIsCoolingDown] = useState(false);
+  useEffect(() => {
+    const cooldownTimeout = setTimeout(() => {
+      setIsCoolingDown(false);
+    }, 1000); // 1.5s cooldown = thoi gian de chuyen slide thanh cong
+    return () => {
+      clearTimeout(cooldownTimeout);
+    };
+  }, [isCoolingDown]);
+  // END: set Cooldown
 
   const handleChevronClick = (direct) => {
-    if (direct === 'right') {
-      if (direction === 'left') {
-        sliderRef.current.prepend(sliderRef.current.lastElementChild);
+    if (!isCoolingDown) {
+      if (direct === 'right') {
+        if (direction === 'left') {
+          sliderRef.current.prepend(sliderRef.current.lastElementChild);
+          setDirection('right');
+        }
         setDirection('right');
+        sliderRef.current.style.transform = `translateX(calc(-100% / ${totalSlides}))`;
+        carouselRef.current.style.justifyContent = 'flex-start';
+        if (currentSlide === totalSlides) {
+          setCurrentSlide(1);
+        } else {
+          setCurrentSlide((prev) => prev + 1);
+        }
       }
-      setDirection('right');
 
-      sliderRef.current.style.transform = `translateX(calc(-100% / ${totalSlides}))`;
-      carouselRef.current.style.justifyContent = 'flex-start';
+      if (direct === 'left') {
+        if (direction === 'right') {
+          sliderRef.current.appendChild(sliderRef.current.firstElementChild);
+          setDirection('left');
+        }
+        sliderRef.current.style.transform = `translateX(calc(100% / ${totalSlides}))`;
+        carouselRef.current.style.justifyContent = 'flex-end';
+        if (currentSlide === 1) {
+          setCurrentSlide(totalSlides);
+        } else {
+          setCurrentSlide((prev) => prev - 1);
+        }
+      }
 
-      if (currentSlide === totalSlides) {
-        setCurrentSlide(1);
-      } else {
-        setCurrentSlide((prev) => prev + 1);
-      }
-    }
-
-    if (direct === 'left') {
-      if (direction === 'right') {
-        sliderRef.current.appendChild(sliderRef.current.firstElementChild);
-        setDirection('left');
-      }
-      sliderRef.current.style.transform = `translateX(calc(100% / ${totalSlides}))`;
-      carouselRef.current.style.justifyContent = 'flex-end';
-      if (currentSlide === 1) {
-        setCurrentSlide(totalSlides);
-      } else {
-        setCurrentSlide((prev) => prev - 1);
-      }
+      setIsCoolingDown(true);
     }
   };
 
