@@ -72,7 +72,7 @@ function Header() {
             </li>
 
             <li className={cx('nav-item')}>
-              <Link to='/' className={cx('title')}>
+              <Link to='/contact' className={cx('title')}>
                 Contact
               </Link>
             </li>
@@ -94,7 +94,7 @@ function Header() {
             </div>
 
             <div className={cx('nav-btn')}>
-              <Link to='/' className={cx('user')}>
+              <Link to='/account/login' className={cx('user')}>
                 <FontAwesomeIcon icon={faUser} />
               </Link>
             </div>

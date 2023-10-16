@@ -60,6 +60,7 @@ const Articles = ({ total }) => {
     <div className={cx('wrapper')}>
       <div className={cx('grid', 'wide')}>
         <div className={cx('row')}>
+          <h1 className={cx('title')}>LUSH Articles Hub</h1>
           {articles.map((article, index) => {
             return (
               <div className={cx('col', 'l-4')} key={index}>
@@ -75,7 +76,7 @@ const Articles = ({ total }) => {
                   </Link>
                   <div className={cx('summary')}>
                     <Link to={`/article/${article.id}`}>
-                      <h2 className={cx('title')}>{article.title}</h2>
+                      <h2 className={cx('article-title')}>{article.title}</h2>
                     </Link>
                     <h3 className={cx('description')}>{article.description}</h3>
                     <p className={cx('publish-date')}>{article.publishedAt}</p>

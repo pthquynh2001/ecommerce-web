@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 75px 30px;
+}
+.inner {
+  max-width: 960px;
+  margin: auto;
+  .title {
+    font-size: 60px;
+  }
+  .description {
+    font-weight: 600;
+  }
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  a {
+    color: #000;
+    font-weight: 600;
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  p {
+    margin-bottom: 15px;
+  }
+}

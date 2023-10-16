@@ -29,7 +29,7 @@ const ProductBanner = ({ type, title }) => {
         alt='banner-img'
         className={cx('img')}
       ></img>
-      <div className={cx('title')}>{title}</div>
+      <h1 className={cx('title')}>{title}</h1>
     </div>
   );
 };
