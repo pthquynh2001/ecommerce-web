@@ -5,6 +5,7 @@ import {
   COLLECTION_NAMES_URL,
   FILTERS_URL,
   PRODUCTS_URL,
+  ARTICLES_URL,
 } from './apiUrls';
 import axios from 'axios';
 
@@ -59,6 +60,16 @@ export const getFilterNames = async () => {
   try {
     const response = await fetch(FILTERS_URL);
     const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const getArticles = async (params) => {
+  try {
+    const response = await axios.get(ARTICLES_URL, { params: params });
+    const data = await response.data;
     return data;
   } catch (err) {
     console.log(err);

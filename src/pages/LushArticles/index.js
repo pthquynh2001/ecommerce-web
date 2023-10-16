@@ -1,10 +1,10 @@
 import Articles from '../../components/Articles';
-const Article = () => {
+const LushArticle = () => {
   return (
     <div style={{ marginTop: '150px' }}>
-      <Articles />
+      <Articles total={15}></Articles>
     </div>
   );
 };
 
-export default Article;
+export default LushArticle;

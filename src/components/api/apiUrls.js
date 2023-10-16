@@ -15,3 +15,7 @@ export const COLLECTION_NAMES_URL = `https://6515be3309e3260018c91706.mockapi.io
 
 // Filter products
 export const FILTERS_URL = `https://651cbb7435bd4107e37310ba.mockapi.io/api/filters`;
+
+//Articles url
+export const ARTICLES_URL =
+  'https://65040a43c8869921ae246c4c.mockapi.io/api/articles';

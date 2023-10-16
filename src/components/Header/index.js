@@ -66,7 +66,7 @@ function Header() {
               <ProductsMenu state={openMenu ? 'active' : 'inactive'} />
             </li>
             <li className={cx('nav-item')}>
-              <Link to='/article' className={cx('title')}>
+              <Link to='/articles' className={cx('title')}>
                 Articles
               </Link>
             </li>

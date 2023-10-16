@@ -1,20 +1,20 @@
 import classNames from 'classnames/bind';
 import styles from './ProductsList.module.scss';
 import Card from '../Card';
+import Filter from './Filter';
 import Pagination from '../Pagination';
 import queryString from 'query-string';
 import { useEffect, useState } from 'react';
-import Filter from './Filter';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getProducts } from '../api/getAPIs';
 
 const cx = classNames.bind(styles);
 
 const ProductsList = ({ total, featured, cat }) => {
-  const location = useLocation();
-  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const queryPage = parseInt(queryString.parse(location.search).page);
   const [pagination, setPagination] = useState(

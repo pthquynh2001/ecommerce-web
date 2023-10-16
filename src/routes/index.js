@@ -8,12 +8,14 @@ import ProductDetails from '../pages/ProductDetails';
 import FeaturedProducts from '../pages/FeaturedProducts';
 import Cart from '../pages/Cart';
 import About from '../pages/About';
-import Article from '../pages/Article';
+import LushArticles from '../pages/LushArticles';
+import ArticleContent from '../pages/ArticleContent';
 
 //ai cung xem duoc, khong can dang nhap
 const publicRoutes = [
   { path: '/', component: Home },
-  { path: '/article', component: Article },
+  { path: '/articles', component: LushArticles },
+  { path: '/article/:id', component: ArticleContent },
   { path: '/about', component: About, layout: SinglePage },
   { path: '/collections/featured', component: FeaturedProducts, exact: true },
   {
