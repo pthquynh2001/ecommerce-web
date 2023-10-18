@@ -94,12 +94,12 @@ function Header() {
             </div>
 
             <div className={cx('nav-btn')}>
-              <Link to='/account/login' className={cx('user')}>
+              <Link to='/account/login' className={cx('user')} title='User'>
                 <FontAwesomeIcon icon={faUser} />
               </Link>
             </div>
             <div className={cx('nav-btn')}>
-              <Link to='/' className={cx('wishlist')}>
+              <Link to='/' className={cx('wishlist')} title='Wishlist'>
                 <FontAwesomeIcon icon={faHeart} />
               </Link>
             </div>
@@ -107,7 +107,7 @@ function Header() {
               className={cx('nav-btn')}
               onClick={() => setOpenCart(!openCart)}
             >
-              <div className={cx('cart')}>
+              <div className={cx('cart')} title='Cart'>
                 <FontAwesomeIcon icon={faCartShopping} />
               </div>
             </div>

@@ -54,12 +54,13 @@ code {
   text-align: center;
   cursor: pointer;
   .btn-text {
-    display: block;
-    height: 100%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     color: #fff;
     font-size: 15px;
-    line-height: 40px;
     padding: 0 15px;
     &::after {
       content: '';
