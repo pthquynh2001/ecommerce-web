@@ -2,29 +2,23 @@ import classNames from 'classnames/bind';
 import styles from './Filter.module.scss';
 import PriceFilter from './PriceFilter';
 import { useState, useEffect } from 'react';
-import { getCollectionNames } from '../../api/getAPIs';
+import { COLLECTION_NAMES } from '../../../constants';
 import { getFilterNames } from '../../api/getAPIs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(styles);
 
 const Filter = () => {
-  const [collections, setCollections] = useState([]);
   const [filters, setFilters] = useState([]);
   const [openCategories, setOpenCategories] = useState([]);
   const [openFilters, setOpenFilters] = useState([]);
+  const collections = COLLECTION_NAMES;
   // START: fetch API
   useEffect(() => {
-    const fetchCollectionData = async () => {
-      const data = await getCollectionNames();
-      setCollections(data);
-    };
-
     const fetchFilterData = async () => {
       const data = await getFilterNames();
       setFilters(data);
     };
-    fetchCollectionData();
     fetchFilterData();
   }, []);
 

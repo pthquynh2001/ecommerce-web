@@ -2,7 +2,6 @@ import {
   SLIDER_IMGS_URL,
   CATEGORY_IMGS_URL,
   PRODUCT_BANNER_IMGS_URL,
-  COLLECTION_NAMES_URL,
   FILTERS_URL,
   PRODUCTS_URL,
   ARTICLES_URL,
@@ -40,15 +39,6 @@ export const getCategoryImgs = async () => {
 export const getBannerImgs = async () => {
   try {
     const response = await fetch(PRODUCT_BANNER_IMGS_URL);
-    const data = await response.json();
-    return data;
-  } catch (err) {
-    console.log(err);
-  }
-};
-export const getCollectionNames = async () => {
-  try {
-    const response = await fetch(COLLECTION_NAMES_URL);
     const data = await response.json();
     return data;
   } catch (err) {

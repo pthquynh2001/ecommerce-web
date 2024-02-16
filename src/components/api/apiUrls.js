@@ -10,9 +10,6 @@ export const PRODUCT_BANNER_IMGS_URL = `https://650e1033a8b42265ec2ceca1.mockapi
 //SLIDER images url
 export const SLIDER_IMGS_URL = `https://65040a43c8869921ae246c4c.mockapi.io/api/slider`;
 
-// collection list names
-export const COLLECTION_NAMES_URL = `https://6515be3309e3260018c91706.mockapi.io/api/collection-names`;
-
 // Filter products
 export const FILTERS_URL = `https://651cbb7435bd4107e37310ba.mockapi.io/api/filters`;
 
